@@ -122,41 +122,21 @@
 
                         <p style="font-family: 'Times New Roman', serif; font-weight: bold; font-style: italic;">Latest
                             Research Highlight</p>
-                        <div class="banner">
-                            <div class="banner-left">
-                                <div class="image-container">
-                                    <a href="https://arxiv.org/abs/2503.00908"><img src="./news_image/LLMCT.webp"
-                                            style="width: 100%;"></a>
+                        <div class="highlight-slider" id="highlight-slider">
+                            <button type="button" class="highlight-nav highlight-prev" aria-label="Previous highlight"
+                                onclick="changeHighlight(-1)">
+                                <i class="fas fa-chevron-up"></i>
+                            </button>
+                            <div class="highlight-viewport" id="highlight-viewport">
+                                <div class="highlight-track" id="highlight-track">
+                                    <div class="highlight-loading">Loading highlights...</div>
                                 </div>
                             </div>
-                            <div class="banner-right" style="padding-left: 3%;">
-                                <p style="font-family: 'Times New Roman', serif; font-size: 16px;">Patient-Level Anatomy
-                                    Meets Scanning-Level Physics: Personalized Federated
-                                    Low-Dose CT Denoising Empowered by Large Language Model</p>
-                                <p
-                                    style="font-family: 'Times New Roman', serif; font-weight: bold; font-style: italic;font-size: 16px;">
-                                    Ziyuan Yang et al, CVPR, 2025</p>
-                                <!-- <a href="https://www.example.com" target="_blank">
-                                <button style="padding: 10px 20px; font-size: 16px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                                  See More
-                                </button>
-                              </a> -->
-                            </div>
-                        </div>
-                        <div class="banner">
-                            <div class="banner-left">
-                                <div class="image-container">
-                                    <a href="https://arxiv.org/abs/2502.00859"><img src="./news_image/FedRIR.webp"
-                                            style="width: 100%;"></a>
-                                </div>
-                            </div>
-                            <div class="banner-right" style="padding-left: 3%;padding-top: 3%;">
-                                <p style="font-family: 'Times New Roman', serif; font-size: 16px;">FedRIR: Rethinking
-                                    Information Representation in Federated Learning</p>
-                                <p
-                                    style="font-family: 'Times New Roman', serif; font-weight: bold; font-style: italic;font-size: 16px;">
-                                    Yongqiang Huang et al, WWW, 2025</p>
-                            </div>
+                            <button type="button" class="highlight-nav highlight-next" aria-label="Next highlight"
+                                onclick="changeHighlight(1)">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="highlight-indicators" id="highlight-indicators"></div>
                         </div>
 
 
@@ -182,6 +162,19 @@
                             <h2><i class="fas fa-arrow-down arrow" id="arrowIcon"></i></i> 2026</h2>
                         </div>
                         <div class="panel-content active">
+                            <div class="panel-content active">
+                                <h5 style="color:rgb(68, 68, 68)">[May.]</h5>
+                                <ul style="margin-bottom:5px;">
+                                    <li> 1 paper was accepted for 2026 International Conference on Machine Learning (ICML). Congratulations to Yingyu!</li>
+                                    <li> 1 paper was accepted for 2026 International Joint Conferences on Artificial Intelligence (IJCAI). Congratulations to Yongqiang and Mengyu!</li>
+                                </ul>
+                            </div>
+                            <div class="panel-content active">
+                                <h5 style="color:rgb(68, 68, 68)">[Apr.]</h5>
+                                <ul style="margin-bottom:5px;">
+                                    <li> 1 paper was accepted for  IEEE Signal Processing Letters (IEEE SPL). Congratulations to Yixin!</li>
+                                </ul>
+                            </div>
                             <div class="panel-content active">
                                 <h5 style="color:rgb(68, 68, 68)">[Mar.]</h5>
                                 <ul style="margin-bottom:5px;">
@@ -425,6 +418,8 @@
     }
 
     let currentIndex = 0;
+    let highlightIndex = 0;
+    let highlightItems = [];
 
     function changeImage(direction) {
         const images = document.querySelectorAll('.slider img');
@@ -436,6 +431,180 @@
         // Move the slider
         document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
     }
+
+    function buildHighlightSlide(item) {
+        const slide = document.createElement('article');
+        slide.className = 'highlight-slide';
+
+        const left = document.createElement('div');
+        left.className = 'banner-left';
+
+        const imageContainer = document.createElement('div');
+        imageContainer.className = 'image-container';
+
+        const link = document.createElement('a');
+        link.href = item.link || '#';
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+
+        const image = document.createElement('img');
+        image.src = item.image || '';
+        image.alt = item.title || 'Research highlight';
+        image.loading = 'lazy';
+        image.style.width = '100%';
+
+        link.appendChild(image);
+        imageContainer.appendChild(link);
+        left.appendChild(imageContainer);
+
+        const right = document.createElement('div');
+        right.className = 'banner-right highlight-copy';
+
+        const title = document.createElement('p');
+        title.className = 'highlight-title';
+        title.textContent = item.title || '';
+
+        const meta = document.createElement('p');
+        meta.className = 'highlight-meta';
+        meta.textContent = [item.authors, item.venue, item.year].filter(Boolean).join(', ');
+
+        right.appendChild(title);
+        right.appendChild(meta);
+
+        slide.appendChild(left);
+        slide.appendChild(right);
+
+        return slide;
+    }
+
+    function renderHighlightIndicators() {
+        const indicators = document.getElementById('highlight-indicators');
+        indicators.innerHTML = '';
+
+        highlightItems.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = `highlight-dot${index === highlightIndex ? ' active' : ''}`;
+            dot.setAttribute('aria-label', `Go to highlight ${index + 1}`);
+            dot.onclick = function () {
+                goToHighlight(index);
+            };
+            indicators.appendChild(dot);
+        });
+    }
+
+    function updateHighlightSlider() {
+        const track = document.getElementById('highlight-track');
+        const dots = document.querySelectorAll('.highlight-dot');
+        const navButtons = document.querySelectorAll('.highlight-nav');
+
+        if (!track || !highlightItems.length) {
+            return;
+        }
+
+        track.style.transform = `translateY(-${highlightIndex * 100}%)`;
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === highlightIndex);
+        });
+
+        navButtons.forEach(button => {
+            button.disabled = highlightItems.length <= 1;
+        });
+    }
+
+    function changeHighlight(direction) {
+        if (!highlightItems.length) {
+            return;
+        }
+
+        highlightIndex = (highlightIndex + direction + highlightItems.length) % highlightItems.length;
+        updateHighlightSlider();
+    }
+
+    function goToHighlight(index) {
+        if (!highlightItems.length) {
+            return;
+        }
+
+        highlightIndex = index;
+        updateHighlightSlider();
+    }
+
+    function bindHighlightGestures() {
+        const slider = document.getElementById('highlight-slider');
+
+        if (!slider || slider.dataset.bound === 'true') {
+            return;
+        }
+
+        slider.dataset.bound = 'true';
+
+        let touchStartY = 0;
+        let touchDeltaY = 0;
+        let wheelLocked = false;
+
+        slider.addEventListener('touchstart', function (event) {
+            touchStartY = event.changedTouches[0].clientY;
+            touchDeltaY = 0;
+        }, { passive: true });
+
+        slider.addEventListener('touchmove', function (event) {
+            touchDeltaY = event.changedTouches[0].clientY - touchStartY;
+        }, { passive: true });
+
+        slider.addEventListener('touchend', function () {
+            if (Math.abs(touchDeltaY) < 50) {
+                return;
+            }
+
+            changeHighlight(touchDeltaY < 0 ? 1 : -1);
+        });
+
+        slider.addEventListener('wheel', function (event) {
+            if (wheelLocked || Math.abs(event.deltaY) < 20) {
+                return;
+            }
+
+            event.preventDefault();
+            wheelLocked = true;
+            changeHighlight(event.deltaY > 0 ? 1 : -1);
+
+            setTimeout(function () {
+                wheelLocked = false;
+            }, 400);
+        }, { passive: false });
+    }
+
+    async function loadHighlights() {
+        const track = document.getElementById('highlight-track');
+
+        try {
+            const response = await fetch('./highlight.json', { cache: 'no-store' });
+            if (!response.ok) {
+                throw new Error(`Failed to load highlight.json: ${response.status}`);
+            }
+
+            const data = await response.json();
+            if (!Array.isArray(data) || !data.length) {
+                throw new Error('No highlights found in highlight.json');
+            }
+
+            highlightItems = data;
+            highlightIndex = 0;
+            track.innerHTML = '';
+            highlightItems.forEach(item => {
+                track.appendChild(buildHighlightSlide(item));
+            });
+
+            renderHighlightIndicators();
+            updateHighlightSlider();
+            bindHighlightGestures();
+        } catch (error) {
+            console.error(error);
+            track.innerHTML = '<div class="highlight-loading">Failed to load highlights.</div>';
+        }
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
         const images = document.querySelectorAll("img");
 
@@ -445,18 +614,8 @@
                 img.src = img.getAttribute('data-src');
             }
         });
-    });
 
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const images = document.querySelectorAll("img");
-
-        images.forEach(img => {
-            if (img.hasAttribute('data-src')) {
-                img.setAttribute('loading', 'lazy');
-                img.src = img.getAttribute('data-src');
-            }
-        });
+        loadHighlights();
     });
 
     $(function() {

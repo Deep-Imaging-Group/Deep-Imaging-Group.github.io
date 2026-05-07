@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Patient-Level Anatomy Meets Scanning-Level Physics: Personalized Federated Low-Dose CT Denoising Empowered by Large Language Model",
+    "authors": "Ziyuan Yang et al.",
+    "venue": "CVPR",
+    "year": "2025",
+    "image": "./news_image/LLMCT.webp",
+    "link": "https://arxiv.org/abs/2503.00908"
+  },
+  {
+    "title": "FedRIR: Rethinking Information Representation in Federated Learning",
+    "authors": "Yongqiang Huang et al.",
+    "venue": "WWW",
+    "year": "2025",
+    "image": "./news_image/FedRIR.webp",
+    "link": "https://arxiv.org/abs/2502.00859"
+  }
+]
