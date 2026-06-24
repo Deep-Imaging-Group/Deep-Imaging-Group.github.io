@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20260624-highlight">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
@@ -429,6 +429,32 @@
     let currentIndex = 0;
     let highlightIndex = 0;
     let highlightItems = [];
+    const fallbackHighlightItems = [
+        {
+            title: 'Patient-Level Anatomy Meets Scanning-Level Physics: Personalized Federated Low-Dose CT Denoising Empowered by Large Language Model',
+            authors: 'Ziyuan Yang et al.',
+            venue: 'CVPR',
+            year: '2025',
+            image: './news_image/LLMCT.webp',
+            link: 'https://arxiv.org/abs/2503.00908'
+        },
+        {
+            title: 'FedRIR: Rethinking Information Representation in Federated Learning',
+            authors: 'Yongqiang Huang et al.',
+            venue: 'WWW',
+            year: '2025',
+            image: './news_image/FedRIR.webp',
+            link: 'https://arxiv.org/abs/2502.00859'
+        },
+        {
+            title: 'Poisoned Distillation: Injecting Backdoors into Distilled Datasets Without Raw Data Access',
+            authors: 'Ziyuan Yang et al.',
+            venue: 'AAAI',
+            year: '2026',
+            image: './news_image/2026_AAAI.png',
+            link: 'https://ojs.aaai.org/index.php/AAAI/article/view/37119'
+        }
+    ];
 
     function changeImage(direction) {
         const images = document.querySelectorAll('.slider img');
@@ -588,7 +614,7 @@
         const track = document.getElementById('highlight-track');
 
         try {
-            const response = await fetch('./highlight.json', { cache: 'no-store' });
+            const response = await fetch('./highlight.json?v=20260624-highlight', { cache: 'no-store' });
             if (!response.ok) {
                 throw new Error(`Failed to load highlight.json: ${response.status}`);
             }
@@ -610,7 +636,15 @@
             bindHighlightGestures();
         } catch (error) {
             console.error(error);
-            track.innerHTML = '<div class="highlight-loading">Failed to load highlights.</div>';
+            highlightItems = fallbackHighlightItems;
+            highlightIndex = 0;
+            track.innerHTML = '';
+            highlightItems.forEach(item => {
+                track.appendChild(buildHighlightSlide(item));
+            });
+            renderHighlightIndicators();
+            updateHighlightSlider();
+            bindHighlightGestures();
         }
     }
 
@@ -627,15 +661,12 @@
         loadHighlights();
     });
 
-    $(function() {
-        var imgs = $("img");
-        imgs.each(function(index, node) {
-
-            var url = $(this).attr("src_");
-            console.log(url)
-            $(this).attr("src", url)
-            console.log(url);
-            
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll("img[src_]").forEach(function (img) {
+            const url = img.getAttribute("src_");
+            if (url) {
+                img.setAttribute("src", url);
+            }
         });
     });
 
