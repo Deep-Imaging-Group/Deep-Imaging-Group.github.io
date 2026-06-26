@@ -1,0 +1,76 @@
+{
+  "journal": [
+    {
+      "title": "A Novel Privacy-Enhancing Framework for Low-Dose CT Denoising",
+      "authors": "Z Yang, H Huangfu, M Ran, Z Wang, H Yu, M Sun, Y Zhang",
+      "year": 2025,
+      "type": "journal",
+      "venue": "IEEE Transactions on Artificial Intelligence",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10966210",
+      "code": "https://github.com/Zi-YuanYang/Encrypt_LDCT_Recon",
+      "order": 1
+    },
+    {
+      "title": "PRAISE-Net: Deep Projection-domain Data-consistent Learning Network for CBCT Metal Artifact Reduction",
+      "authors": "Z Wu, X Zhong, T Lyu, Y Xi, X Ji, Y Zhang, S Xie, H Yu, Y Chen",
+      "year": 2025,
+      "type": "journal",
+      "venue": "IEEE Transactions on Instrumentation and Measurement",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10937324",
+      "code": "",
+      "order": 2
+    }
+  ],
+  "conference": [
+    {
+      "title": "FedRIR: Rethinking Information Representation in Federated Learning",
+      "authors": "Y Huang, Z Shao, Z Yang, Z Lu, Y Zhang",
+      "year": 2025,
+      "type": "conference",
+      "venue": "Proceedings of the ACM on Web Conference 2025",
+      "paper": "https://dl.acm.org/doi/abs/10.1145/3696410.3714612",
+      "code": "https://github.com/Deep-Imaging-Group/FedRIR",
+      "order": 1
+    },
+    {
+      "title": "CAW-CL: Cascaded Adaptive Weighted Contrastive Learning for Unsupervised Ultrasound Plane-Wave Image Reconstruction",
+      "authors": "A Wang, J Lu, Y Zhang",
+      "year": 2025,
+      "type": "conference",
+      "venue": "ICASSP 2025-2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10888135",
+      "code": "",
+      "order": 2
+    },
+    {
+      "title": "Modality Modulation and Dual Consistency for Multi-Modality Semi-Supervised Medical Image Segmentation",
+      "authors": "Y Chen, Z Yang, D Xiong, Y Zhang",
+      "year": 2025,
+      "type": "conference",
+      "venue": "ICASSP 2025-2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10887861",
+      "code": "",
+      "order": 3
+    },
+    {
+      "title": "Plaintext-Free Deep Learning for Privacy-Preserving Medical Image Analysis through Frequency Information Embedding",
+      "authors": "M Sun, Z Yang, M Ran, Z Wang, H Yu, Y Zhang",
+      "year": 2025,
+      "type": "conference",
+      "venue": "ICASSP 2025-2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10888987",
+      "code": "",
+      "order": 4
+    },
+    {
+      "title": "Incorporating Improved Sinusoidal Threshold-based Semi-supervised Method and Diffusion Models for Osteoporosis Diagnosis",
+      "authors": "W Ke, H Chen, Y Zhang, X Deng",
+      "year": 2025,
+      "type": "conference",
+      "venue": "ICASSP 2025-2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10889899/",
+      "code": "",
+      "order": 5
+    }
+  ]
+}

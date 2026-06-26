@@ -2,46 +2,64 @@
 
 本文档说明当前主页 `Publication` 页面的论文数据维护方式。
 
-注意：Google Scholar 自动抓取逻辑已经暂停。原因是 Google Scholar 容易触发反爬限制，结果不稳定。当前不要依赖爬虫生成论文数据，等待后续再决定新的数据来源或半自动方案。
+注意：Google Scholar 自动抓取逻辑已经暂停。原因是 Google Scholar 容易触发反爬限制，结果不稳定。当前不要依赖爬虫生成论文数据。
 
 ## 1. 当前数据结构
 
-正式网站读取下面的索引文件：
+正式网站先读取年份索引：
 
 ```text
 publications/index.json
 ```
 
-索引里记录每一年、每一类论文对应的 JSON 文件路径。每篇论文单独保存为一个 JSON，例如：
-
-```text
-publications/2025/journal/example.json
-publications/2025/conference/example.json
-```
-
-`publication.html` 会先读取 `publications/index.json`，再加载里面列出的每篇论文 JSON。
-
-## 2. 单篇论文 JSON 格式
-
-正式论文 JSON 推荐保持下面结构：
+索引只负责控制显示哪些年份，以及哪一年默认展开：
 
 ```json
 {
-  "title": "Paper Title",
-  "authors": "A Author, B Author, Hu Chen",
-  "year": 2025,
-  "type": "journal",
-  "venue": "IEEE Transactions on Medical Imaging",
-  "paper": "https://example.com/paper",
-  "code": "",
-  "order": 1
+  "years": [
+    {
+      "year": 2025,
+      "active": true
+    },
+    {
+      "year": 2024,
+      "active": false
+    }
+  ]
 }
 ```
 
-字段说明：
+每一年的论文放在一个年度 JSON 中：
+
+```text
+publications/2025.json
+publications/2024.json
+```
+
+年度 JSON 包含两个字段：`journal` 和 `conference`。它们分别是论文数组：
+
+```json
+{
+  "journal": [
+    {
+      "title": "Paper Title",
+      "authors": "A Author, B Author, Hu Chen",
+      "year": 2025,
+      "type": "journal",
+      "venue": "IEEE Transactions on Medical Imaging",
+      "paper": "https://example.com/paper",
+      "code": "",
+      "order": 1
+    }
+  ],
+  "conference": []
+}
+```
+
+## 2. 单篇论文字段
 
 - `title`：论文标题。
-- `authors`：作者列表，建议使用完整姓名，例如 `Hu Chen`，不要写成 `H Chen`。
+- `authors`：作者列表，建议使用完整姓名，例如 `Hu Chen`。
 - `year`：发表年份。
 - `type`：只能使用 `journal` 或 `conference`。
 - `venue`：期刊或会议名称。
@@ -49,34 +67,7 @@ publications/2025/conference/example.json
 - `code`：代码链接，没有就留空字符串。
 - `order`：同一年同一类别内的显示顺序，数字越小越靠前。
 
-## 3. 临时审核目录
-
-如果后续你手工整理了一批候选论文，但还不想直接放进正式目录，可以先放在：
-
-```text
-py_script/temp-pub-raw/<year>/<journal|conference>/
-```
-
-例如：
-
-```text
-py_script/temp-pub-raw/2026/conference/example.json
-```
-
-这里的文件不会被网站读取，只作为人工审核区。
-
-审核重点：
-
-- 论文名是否正确。
-- 作者是否完整，尤其是 `Hu Chen` 等姓名是否写全。
-- 年份是否正确。
-- `type` 是否正确分为 `journal` 或 `conference`。
-- 期刊/会议名称格式是否统一。
-- `paper` 链接是否可打开。
-- `code` 链接是否需要人工补充。
-- `order` 是否符合想要的展示顺序。
-
-## 4. 从 BibTeX 生成候选 JSON
+## 3. 从 BibTeX 生成候选 JSON
 
 把候选论文的 BibTeX 放到：
 
@@ -110,10 +101,24 @@ py_script/candidate.bib
 python3 py_script/bib_to_temp_publications.py
 ```
 
-脚本会生成：
+脚本会生成候选年度 JSON：
 
 ```text
-py_script/temp-pub-raw/<year>/<journal|conference>/*.json
+py_script/temp-pub-raw/2026.json
+```
+
+这个文件的结构和正式的 `publications/2026.json` 一致。人工审核后，把里面的论文复制到正式年度 JSON 的 `journal` 或 `conference` 数组中。
+
+如果只想转换某一年：
+
+```bash
+python3 py_script/bib_to_temp_publications.py --year 2026
+```
+
+如果不想清空旧的候选年度 JSON：
+
+```bash
+python3 py_script/bib_to_temp_publications.py --no-clean
 ```
 
 转换规则：
@@ -127,54 +132,18 @@ py_script/temp-pub-raw/<year>/<journal|conference>/*.json
 - `code` 默认留空，需要人工补充。
 - 同一年同一类别内，按 BibTeX 中出现顺序生成 `order`。
 
-如果不想清空旧的临时候选目录，可以运行：
+## 4. 发布到正式数据
 
-```bash
-python3 py_script/bib_to_temp_publications.py --no-clean
-```
+人工审核候选 JSON 后：
 
-## 5. 发布到正式目录
+1. 如果是新年份，在 `publications/` 下新建 `publications/<year>.json`。
+2. 把候选论文复制到对应年度 JSON 的 `journal` 或 `conference` 数组。
+3. 手动维护 `order`。
+4. 如果是新年份，把该年份加入 `publications/index.json`。
 
-审核无误后，把候选 JSON 复制到正式目录：
+`publications/index.json` 需要手工维护，不再使用脚本自动重建。
 
-```text
-publications/<year>/<journal|conference>/
-```
-
-例如：
-
-```bash
-cp py_script/temp-pub-raw/2026/conference/example.json publications/2026/conference/
-```
-
-然后运行脚本自动更新索引：
-
-```bash
-python3 py_script/build_publication_index.py
-```
-
-这个脚本会扫描 `publications/`，自动重建：
-
-```text
-publications/index.json
-publications/<year>/<journal|conference>/index.json
-```
-
-默认会尽量保留原来哪一年展开的设置。如果没有旧设置，会默认展开最新年份。
-
-如果想指定默认展开年份，例如 2026：
-
-```bash
-python3 py_script/build_publication_index.py --active-year 2026
-```
-
-如果只想预览将要生成的索引，不写入文件：
-
-```bash
-python3 py_script/build_publication_index.py --dry-run
-```
-
-## 6. Google Scholar 抓取已暂停
+## 5. Google Scholar 抓取已暂停
 
 下面这个脚本目前只是禁用提示，不会访问网络，也不会生成 JSON：
 
@@ -182,9 +151,9 @@ python3 py_script/build_publication_index.py --dry-run
 python3 py_script/fetch_scholar_publications.py --year 2025
 ```
 
-保留这个文件只是为了避免旧命令误执行真实爬虫逻辑。后续如果改用其他数据源，再重新设计这里的逻辑。
+保留这个文件只是为了避免旧命令误执行真实爬虫逻辑。
 
-## 7. 本地验证
+## 6. 本地验证
 
 启动本地静态服务器：
 
@@ -208,7 +177,7 @@ http://127.0.0.1:8000/publication.html
 
 验证完成后，可以用 `Ctrl+C` 停止本地服务器。
 
-## 8. 提交和部署
+## 7. 提交和部署
 
 确认无误后提交修改：
 
@@ -216,16 +185,4 @@ http://127.0.0.1:8000/publication.html
 git add publications py_script publication.html css/style.css .gitignore
 git commit -m "Update publications"
 git push
-```
-
-推送后等待 GitHub Pages 自动部署。
-
-如果线上页面还是旧内容，通常是缓存或 GitHub Pages 尚未部署完成。可以尝试：
-
-- 等待几分钟。
-- 浏览器强制刷新。
-- 用带版本参数的 URL 测试，例如：
-
-```text
-https://deep-imaging-group.github.io/publication.html?v=20260624
 ```

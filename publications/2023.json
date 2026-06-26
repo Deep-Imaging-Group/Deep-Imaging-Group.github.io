@@ -1,0 +1,246 @@
+{
+  "journal": [
+    {
+      "title": "FAM-Former: Global Transformer and Feature Aggregation Module for Knee MRI Age Estimation",
+      "authors": "L He, H Zhu, X Deng, F Fan, P Liao, W Du, H Chen, Z Deng, Y Zhang",
+      "year": 2023,
+      "type": "journal",
+      "venue": "IEEE Transactions on Instrumentation and Measurement",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10371402",
+      "code": "",
+      "order": 1
+    },
+    {
+      "title": "Hypernetwork-based physics-driven personalized federated learning for CT imaging",
+      "authors": "Z Yang, W Xia, Z Lu, Y Chen, X Li, Y Zhang",
+      "year": 2023,
+      "type": "journal",
+      "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10361833",
+      "code": "https://github.com/Zi-YuanYang/HyperFed",
+      "order": 2
+    },
+    {
+      "title": "SOUL-net: A sparse and low-rank unrolling network for spectral CT image reconstruction",
+      "authors": "X Chen, W Xia, Z Yang, H Chen, Y Liu, J Zhou, Z Wang, Y Chen, B Wen, Y Zhang",
+      "year": 2023,
+      "type": "journal",
+      "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10271326",
+      "code": "",
+      "order": 3
+    },
+    {
+      "title": "CoreDiff: Contextual error-modulated generalized diffusion model for low-dose CT denoising and generalization",
+      "authors": "Q Gao, Z Li, J Zhang, Y Zhang, H Shan",
+      "year": 2023,
+      "type": "journal",
+      "venue": "IEEE Transactions on Medical Imaging",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10268250",
+      "code": "https://github.com/qgao21/CoreDiff",
+      "order": 4
+    },
+    {
+      "title": "Dynamic corrected split federated learning with homomorphic encryption for u-shaped medical image networks",
+      "authors": "Z Yang, Y Chen, H Huangfu, M Ran, H Wang, X Li, Y Zhang",
+      "year": 2023,
+      "type": "journal",
+      "venue": "IEEE Journal of Biomedical and Health Informatics",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10256094",
+      "code": "https://github.com/Zi-YuanYang/DC-SFL",
+      "order": 5
+    },
+    {
+      "title": "A review of deep learning CT reconstruction from incomplete projection data",
+      "authors": "T Wang, W Xia, J Lu, Y Zhang",
+      "year": 2023,
+      "type": "journal",
+      "venue": "IEEE Transactions on Radiation and Plasma Medical Sciences",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10253669",
+      "code": "",
+      "order": 6
+    },
+    {
+      "title": "SemiMAR: Semi-supervised learning for CT metal artifact reduction",
+      "authors": "T Wang, H Yu, Z Wang, H Chen, Y Liu, J Lu, Y Zhang",
+      "year": 2023,
+      "type": "journal",
+      "venue": "IEEE Journal of Biomedical and Health Informatics",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10239528/",
+      "code": "https://github.com/zjk1988/SemiMAR",
+      "order": 7
+    },
+    {
+      "title": "Comprehensive competition mechanism in palmprint recognition",
+      "authors": "Z Yang, H Huangfu, L Leng, B Zhang, ABJ Teoh, Y Zhang",
+      "year": 2023,
+      "type": "journal",
+      "venue": "IEEE Transactions on Information Forensics and Security",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10223233",
+      "code": "https://github.com/Zi-YuanYang/CCNet",
+      "order": 8
+    },
+    {
+      "title": "Speckle denoising of optical coherence tomography image using residual encoder–decoder CycleGAN",
+      "authors": "K Xie, M Luo, H Chen, M Yang, Y He, P Liao, Y Zhang",
+      "year": 2023,
+      "type": "journal",
+      "venue": "Signal, Image and Video Processing",
+      "paper": "https://link.springer.com/article/10.1007/s11760-022-02361-6",
+      "code": "",
+      "order": 9
+    },
+    {
+      "title": "RegFormer: A local–nonlocal regularization-based model for sparse-view CT reconstruction",
+      "authors": "W Xia, Z Yang, Z Lu, Z Wang, Y Zhang",
+      "year": 2023,
+      "type": "journal",
+      "venue": "IEEE Transactions on Radiation and Plasma Medical Sciences",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10138692/",
+      "code": "https://github.com/Deep-Imaging-Group/RegFormer",
+      "order": 10
+    },
+    {
+      "title": "CO3Net: Coordinate-Aware Contrastive Competitive Neural Network for Palmprint Recognition",
+      "authors": "Z Yang, W Xia, Y Qiao, Z Lu, B Zhang, L Leng, Y Zhang",
+      "year": 2023,
+      "type": "journal",
+      "venue": "IEEE Transactions on Instrumentation and Measurement",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10124928",
+      "code": "https://github.com/Zi-YuanYang/CO3Net",
+      "order": 11
+    },
+    {
+      "title": "Blind image quality assessment via deep response feature decomposition and aggregation",
+      "authors": "H Wang, G Wang, W Xia, Z Yang, H Yu, L Fang, Y Zhang",
+      "year": 2023,
+      "type": "journal",
+      "venue": "IEEE Journal of Selected Topics in Signal Processing",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10123006",
+      "code": "",
+      "order": 12
+    },
+    {
+      "title": "Cross-database attack of different coding-based palmprint templates",
+      "authors": "Z Yang, L Leng, ABJ Teoh, B Zhang, Y Zhang",
+      "year": 2023,
+      "type": "journal",
+      "venue": "Knowledge-Based Systems",
+      "paper": "https://www.sciencedirect.com/science/article/pii/S0950705123000606",
+      "code": "",
+      "order": 13
+    },
+    {
+      "title": "Physics-/model-based and data-driven methods for low-dose computed tomography: A survey",
+      "authors": "W Xia, H Shan, G Wang, Y Zhang",
+      "year": 2023,
+      "type": "journal",
+      "venue": "IEEE signal processing magazine",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10054206",
+      "code": "",
+      "order": 14
+    },
+    {
+      "title": "DeSeg: auto detector-based segmentation for brain metastases",
+      "authors": "H Yu, Z Zhang, W Xia, Y Liu, L Liu, W Luo, J Zhou, Y Zhang",
+      "year": 2023,
+      "type": "journal",
+      "venue": "Physics in Medicine & Biology",
+      "paper": "https://iopscience.iop.org/article/10.1088/1361-6560/acace7/meta",
+      "code": "",
+      "order": 15
+    },
+    {
+      "title": "TIME-Net: Transformer-integrated multi-encoder network for limited-angle artifact removal in dual-energy CBCT",
+      "authors": "Y Zhang, D Hu, Z Yan, Q Zhao, G Quan, S Luo, Y Zhang, Y Chen",
+      "year": 2023,
+      "type": "journal",
+      "venue": "Medical Image Analysis",
+      "paper": "https://www.sciencedirect.com/science/article/pii/S136184152200278X",
+      "code": "",
+      "order": 16
+    }
+  ],
+  "conference": [
+    {
+      "title": "PET image denoising with score-based diffusion probabilistic models",
+      "authors": "C Shen, Z Yang, Y Zhang",
+      "year": 2023,
+      "type": "conference",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+      "paper": "https://link.springer.com/chapter/10.1007/978-3-031-43907-0_26",
+      "code": "https://github.com/Deep-Imaging-Group/BC_DPM",
+      "order": 1
+    },
+    {
+      "title": "Inter-slice consistency for unpaired low-dose ct denoising using boosted contrastive learning",
+      "authors": "J Jing, T Wang, H Yu, Z Lu, Y Zhang",
+      "year": 2023,
+      "type": "conference",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+      "paper": "https://link.springer.com/chapter/10.1007/978-3-031-43907-0_23",
+      "code": "",
+      "order": 2
+    },
+    {
+      "title": "Building a bridge: close the domain gap in ct metal artifact reduction",
+      "authors": "T Wang, H Yu, Y Liu, H Sun, Y Zhang",
+      "year": 2023,
+      "type": "conference",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+      "paper": "https://link.springer.com/chapter/10.1007/978-3-031-43999-5_20",
+      "code": "",
+      "order": 3
+    },
+    {
+      "title": "ASCON: Anatomy-Aware Supervised Contrastive Learning Framework for Low-Dose CT Denoising",
+      "authors": "Z Chen, Q Gao, Y Zhang, H Shan",
+      "year": 2023,
+      "type": "conference",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+      "paper": "https://link.springer.com/chapter/10.1007/978-3-031-43999-5_34",
+      "code": "https://github.com/hao1635/ASCON",
+      "order": 4
+    },
+    {
+      "title": "A Robust Prototype-Free Retrieval Method for Automatic Check-Out",
+      "authors": "H Huangfu, Z Yang, M Ran, W Zhang, J Lu, Y Zhang",
+      "year": 2023,
+      "type": "conference",
+      "venue": "IEEE Symposium on Computers and Communications",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10218102/",
+      "code": "",
+      "order": 5
+    },
+    {
+      "title": "Stay in the middle: A semi-supervised model for CT metal artifact reduction",
+      "authors": "T Wang, H Yu, Z Lu, Z Zhang, J Zhou, Y Zhang",
+      "year": 2023,
+      "type": "conference",
+      "venue": "IEEE International Conference on Acoustics, Speech and Signal Processing",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10095681",
+      "code": "",
+      "order": 6
+    },
+    {
+      "title": "EVIL: Evidential inference learning for trustworthy semi-supervised medical image segmentation",
+      "authors": "Y Chen, Z Yang, C Shen, Z Wang, Y Qin, Y Zhang",
+      "year": 2023,
+      "type": "conference",
+      "venue": "IEEE International Symposium on Biomedical Imaging",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10230589",
+      "code": "https://github.com/CYYukio/EVidential-Inference-Learning",
+      "order": 7
+    },
+    {
+      "title": "Dynamic focus mechanism-based dual-domain reconstruction network for accelerated MRI",
+      "authors": "Z Wang, Z Wang, Z Zhang, Z Yang, M Ran, H Yu, Z Yu, Y Zhang",
+      "year": 2023,
+      "type": "conference",
+      "venue": "IEEE International Symposium on Biomedical Imaging",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10230834",
+      "code": "",
+      "order": 8
+    }
+  ]
+}

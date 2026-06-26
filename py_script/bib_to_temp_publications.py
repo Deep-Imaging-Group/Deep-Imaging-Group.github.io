@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convert py_script/candidate.bib into temporary publication JSON files."""
+"""Convert py_script/candidate.bib into temporary yearly publication JSON files."""
 
 from __future__ import annotations
 
@@ -176,22 +176,6 @@ def paper_link(fields: dict[str, str]) -> str:
     return ""
 
 
-def slugify(title: str) -> str:
-    slug = title.lower()
-    slug = re.sub(r"[^a-z0-9]+", "-", slug)
-    return slug.strip("-")[:90] or "publication"
-
-
-def unique_slug(base: str, used: set[str]) -> str:
-    slug = base
-    counter = 2
-    while slug in used:
-        slug = f"{base}-{counter}"
-        counter += 1
-    used.add(slug)
-    return slug
-
-
 def entry_to_publication(entry: BibEntry, order: int) -> dict[str, object]:
     fields = entry.fields
     year_text = fields.get("year", "")
@@ -227,14 +211,8 @@ def write_json(path: Path, data: object) -> None:
 def clean_candidate_json(output_dir: Path) -> None:
     if not output_dir.exists():
         return
-    for path in output_dir.glob("[0-9][0-9][0-9][0-9]/*/*.json"):
+    for path in output_dir.glob("[0-9][0-9][0-9][0-9].json"):
         path.unlink()
-    for directory in sorted(output_dir.glob("[0-9][0-9][0-9][0-9]/*"), reverse=True):
-        if directory.is_dir() and not any(directory.iterdir()):
-            directory.rmdir()
-    for directory in sorted(output_dir.glob("[0-9][0-9][0-9][0-9]"), reverse=True):
-        if directory.is_dir() and not any(directory.iterdir()):
-            directory.rmdir()
 
 
 def convert_bib(input_path: Path, output_dir: Path, clean: bool, target_year: int | None) -> int:
@@ -250,7 +228,7 @@ def convert_bib(input_path: Path, output_dir: Path, clean: bool, target_year: in
         raise ValueError(f"No BibTeX entries found in {input_path}")
 
     order_by_bucket: dict[tuple[int, str], int] = {}
-    used_by_bucket: dict[tuple[int, str], set[str]] = {}
+    publications_by_year: dict[int, dict[str, list[dict[str, object]]]] = {}
     count = 0
 
     for entry in entries:
@@ -267,13 +245,15 @@ def convert_bib(input_path: Path, output_dir: Path, clean: bool, target_year: in
         order_by_bucket[bucket] = order_by_bucket.get(bucket, 0) + 1
 
         publication = entry_to_publication(entry, order_by_bucket[bucket])
-        used = used_by_bucket.setdefault(bucket, set())
-        slug = unique_slug(slugify(str(publication["title"])), used)
-        write_json(output_dir / str(year) / bucket_type / f"{slug}.json", publication)
+        year_data = publications_by_year.setdefault(year, {"journal": [], "conference": []})
+        year_data[bucket_type].append(publication)
         count += 1
 
     if target_year is not None and count == 0:
         raise ValueError(f"No BibTeX entries found for year {target_year}.")
+
+    for year, year_data in publications_by_year.items():
+        write_json(output_dir / f"{year}.json", year_data)
     return count
 
 

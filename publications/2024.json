@@ -1,0 +1,226 @@
+{
+  "journal": [
+    {
+      "title": "UniAda: Domain Unifying and Adapting Network for Generalizable Medical Image Segmentation",
+      "authors": "Z Zhang, Y Chen, H Yu, Z Wang, S Wang, F Fan, H Shan, Y Zhang",
+      "year": 2024,
+      "type": "journal",
+      "venue": "IEEE Transactions on Medical Imaging",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10816643",
+      "code": "https://github.com/ZhouZhang233/UniAda",
+      "order": 1
+    },
+    {
+      "title": "Self-supervised content-consistent contrast enhancement framework for ultrafast plane-wave imaging",
+      "authors": "A Wang, J Lu, Z Yang, W Liang, H Zhuang, Y Zhang",
+      "year": 2024,
+      "type": "journal",
+      "venue": "IEEE Transactions on Instrumentation and Measurement",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10711901",
+      "code": "https://github.com/ Wang-aohua/SC3E",
+      "order": 2
+    },
+    {
+      "title": "Solving Zero-Shot Sparse-View CT Reconstruction With Variational Score Solver",
+      "authors": "L He, W Du, P Liao, F Fan, H Chen, H Yang, Y Zhang",
+      "year": 2024,
+      "type": "journal",
+      "venue": "IEEE Transactions on Medical Imaging",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10706876",
+      "code": "",
+      "order": 3
+    },
+    {
+      "title": "PrideDiff: Physics-Regularized Generalized Diffusion Model for CT Reconstruction",
+      "authors": "Z Lu, Q Gao, T Wang, Z Yang, Z Wang, H Yu, H Chen, J Zhou, H Shan, Y Zhang",
+      "year": 2024,
+      "type": "journal",
+      "venue": "IEEE Transactions on Radiation and Plasma Medical Sciences",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10701005",
+      "code": "https://github.com/Deep-Imaging-Group",
+      "order": 4
+    },
+    {
+      "title": "Physics-driven spectrum-consistent federated learning for palmprint verification",
+      "authors": "Z Yang, ABJ Teoh, B Zhang, L Leng, Y Zhang",
+      "year": 2024,
+      "type": "journal",
+      "venue": "International Journal of Computer Vision",
+      "paper": "https://link.springer.com/article/10.1007/s11263-024-02077-9",
+      "code": "https://github.com/Zi-YuanYang/PSFed-Palm",
+      "order": 5
+    },
+    {
+      "title": "Provably convergent learned inexact descent algorithm for low-dose ct reconstruction",
+      "authors": "Q Zhang, M Alvandipour, W Xia, Y Zhang, X Ye, Y Chen",
+      "year": 2024,
+      "type": "journal",
+      "venue": "Journal of Scientific Computing",
+      "paper": "https://link.springer.com/article/10.1007/s10915-024-02638-7",
+      "code": "",
+      "order": 6
+    },
+    {
+      "title": "Test-Time Adaptation via Orthogonal Meta-Learning for Medical Imaging",
+      "authors": "Z Wang, Z Lu, T Wang, Z Yang, H Yu, Z Wang, Y Chen, J Lu, Y Zhang",
+      "year": 2024,
+      "type": "journal",
+      "venue": "IEEE Transactions on Radiation and Plasma Medical Sciences",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10681615",
+      "code": "https://github.com/Zi-YuanYang/PSFed-Palm",
+      "order": 7
+    },
+    {
+      "title": "A dual-level cancelable framework for palmprint verification and hack-proof data storage",
+      "authors": "Z Yang, M Kang, ABJ Teoh, C Gao, W Chen, B Zhang, Y Zhang",
+      "year": 2024,
+      "type": "journal",
+      "venue": "IEEE Transactions on Information Forensics and Security",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10681118",
+      "code": "https://github.com/Zi-YuanYang/DCPV",
+      "order": 8
+    },
+    {
+      "title": "Gradient-Guided Network with Fourier Enhancement for Glioma Segmentation in Multimodal 3D MRI",
+      "authors": "Z Zhang, H Yu, Z Wang, Z Wang, J Lu, Y Liu, Y Zhang",
+      "year": 2024,
+      "type": "journal",
+      "venue": "IEEE Journal of Biomedical and Health Informatics",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10666019/",
+      "code": "",
+      "order": 9
+    },
+    {
+      "title": "Bi-Constraints Diffusion: A Conditional Diffusion Model with Degradation Guidance for Metal Artifact Reduction",
+      "authors": "M Luo, N Zhou, T Wang, L He, W Wang, H Chen, P Liao, Y Zhang",
+      "year": 2024,
+      "type": "journal",
+      "venue": "IEEE Transactions on Medical Imaging",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10638000",
+      "code": "",
+      "order": 10
+    },
+    {
+      "title": "PRX-Change: Enhancing remote sensing change detection through progressive feature refinement and Cross-Attention interaction",
+      "authors": "H Tan, L He, W Du, H Liu, H Chen, Y Zhang, H Yang",
+      "year": 2024,
+      "type": "journal",
+      "venue": "International Journal of Applied Earth Observation and Geoinformation",
+      "paper": "https://www.sciencedirect.com/science/article/pii/S1569843224003625",
+      "code": "",
+      "order": 11
+    },
+    {
+      "title": "Weakly supervised low-dose computed tomography denoising based on generative adversarial networks",
+      "authors": "P Liao, X Zhang, Y Wu, H Chen, W Du, H Liu, H Yang, Y Zhang",
+      "year": 2024,
+      "type": "journal",
+      "venue": "Quantitative Imaging in Medicine and Surgery",
+      "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11320552/",
+      "code": "",
+      "order": 12
+    },
+    {
+      "title": "Generalizable MRI motion correction via compressed sensing equivariant imaging prior",
+      "authors": "Z Wang, M Ran, Z Yang, H Yu, J Jin, T Wang, J Lu, Y Zhang",
+      "year": 2024,
+      "type": "journal",
+      "venue": "IEEE Transactions on Circuits and Systems for Video Technology",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10606502",
+      "code": "https://github.com/wangzhiwen-scu/EIP4MoCo",
+      "order": 13
+    },
+    {
+      "title": "ReMAR: a preoperative CT angiography guided metal artifact reduction framework designed for follow-up CTA of endovascular coiling",
+      "authors": "Y Zhang, L Liu, H Yu, T Wang, Y Zhang, Y Liu",
+      "year": 2024,
+      "type": "journal",
+      "venue": "Physics in Medicine & Biology",
+      "paper": "https://iopscience.iop.org/article/10.1088/1361-6560/ad5ef4/meta",
+      "code": "https://github.com/wangzhiwen-scu/EIP4MoCo",
+      "order": 14
+    },
+    {
+      "title": "Multiple organ segmentation framework for brain metastasis radiotherapy",
+      "authors": "H Yu, Z Yang, Z Zhang, T Wang, M Ran, Z Wang, L Liu, Y Liu, Y Zhang",
+      "year": 2024,
+      "type": "journal",
+      "venue": "Computers in Biology and Medicine",
+      "paper": "https://www.sciencedirect.com/science/article/pii/S0010482524007224",
+      "code": "https://github.com/wangzhiwen-scu/EIP4MoCo",
+      "order": 15
+    },
+    {
+      "title": "Evidence-based uncertainty-aware semi-supervised medical image segmentation",
+      "authors": "Y Chen, Z Yang, C Shen, Z Wang, Z Zhang, Y Qin, X Wei, J Lu, Y Liu, Y Zhang",
+      "year": 2024,
+      "type": "journal",
+      "venue": "Computers in Biology and Medicine",
+      "paper": "https://www.sciencedirect.com/science/article/pii/S001048252400088X",
+      "code": "https://github.com/CYYukio/EVidential-Inference-Learning",
+      "order": 16
+    },
+    {
+      "title": "Promoting fast MR imaging pipeline by full-stack AI",
+      "authors": "Z Wang, B Li, H Yu, Z Zhang, M Ran, W Xia, Z Yang, J Lu, H Chen, J Zhou, Y Zhang",
+      "year": 2024,
+      "type": "journal",
+      "venue": "Iscience",
+      "paper": "https://www.cell.com/iscience/fulltext/S2589-0042(23)02685-8",
+      "code": "",
+      "order": 17
+    },
+    {
+      "title": "Bidirectional condition diffusion probabilistic models for pet image denoising",
+      "authors": "C Shen, C Tie, Z Yang, N Zhang, Y Zhang",
+      "year": 2024,
+      "type": "journal",
+      "venue": "IEEE Transactions on Radiation and Plasma Medical Sciences",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/10401984/",
+      "code": "",
+      "order": 18
+    },
+    {
+      "title": "Progressive dual-domain-transfer cycleGAN for unsupervised MRI reconstruction",
+      "authors": "B Li, Z Wang, Z Yang, W Xia, Y Zhang",
+      "year": 2024,
+      "type": "journal",
+      "venue": "Neurocomputing",
+      "paper": "https://www.sciencedirect.com/science/article/pii/S0925231223010573",
+      "code": "",
+      "order": 19
+    }
+  ],
+  "conference": [
+    {
+      "title": "Textual inversion and self-supervised refinement for radiology report generation",
+      "authors": "Y Luo, H Li, X Wu, M Cao, X Huang, Z Zhu, P Liao, H Chen, Y Zhang",
+      "year": 2024,
+      "type": "conference",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+      "paper": "https://link.springer.com/chapter/10.1007/978-3-031-72086-4_64",
+      "code": "",
+      "order": 1
+    },
+    {
+      "title": "Inject Backdoor in Measured Data to Jeopardize Full-Stack Medical Image Analysis System",
+      "authors": "Z Yang, Y Chen, M Sun, Y Zhang",
+      "year": 2024,
+      "type": "conference",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+      "paper": "https://link.springer.com/chapter/10.1007/978-3-031-72104-5_38",
+      "code": "https://github.com/Deep-Imaging-Group/LTGM",
+      "order": 2
+    },
+    {
+      "title": "Point Segment and Count: A Generalized Framework for Object Counting",
+      "authors": "Z Huang, M Dai, Y Zhang, J Zhang, H Shan",
+      "year": 2024,
+      "type": "conference",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "paper": "https://openaccess.thecvf.com/content/CVPR2024/html/Huang_Point_Segment_and_Count_A_Generalized_Framework_for_Object_Counting_CVPR_2024_paper.html",
+      "code": "",
+      "order": 3
+    }
+  ]
+}

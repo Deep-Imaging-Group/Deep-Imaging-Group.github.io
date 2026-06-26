@@ -1,0 +1,276 @@
+{
+  "journal": [
+    {
+      "title": "DREAM-Net: Deep residual error iterative minimization network for sparse-view CT reconstruction",
+      "authors": "Y Zhang, D Hu, S Hao, J Liu, G Quan, Y Zhang, X Ji, Y Chen",
+      "year": 2022,
+      "type": "journal",
+      "venue": "IEEE Journal of Biomedical and Health Informatics",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/9963565",
+      "code": "",
+      "order": 1
+    },
+    {
+      "title": "Mlf-iosc: multi-level fusion network with independent operation search cell for low-dose ct denoising",
+      "authors": "J Shen, M Luo, H Liu, P Liao, H Chen, Y Zhang",
+      "year": 2022,
+      "type": "journal",
+      "venue": "IEEE Transactions on Medical Imaging",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/9966660",
+      "code": "",
+      "order": 2
+    },
+    {
+      "title": "LEARN++: recurrent dual-domain reconstruction network for compressed sensing CT",
+      "authors": "Y Zhang, H Chen, W Xia, Y Chen, B Liu, Y Liu, H Sun, J Zhou",
+      "year": 2022,
+      "type": "journal",
+      "venue": "IEEE Transactions on Radiation and Plasma Medical Sciences",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/9951388",
+      "code": "",
+      "order": 3
+    },
+    {
+      "title": "Low-dose CT Denoising Based on Subspace Projection and Edge Enhancement",
+      "authors": "Y Wei, Z Yang, W Xia, T Wang, Y Zhang",
+      "year": 2022,
+      "type": "journal",
+      "venue": "CT Theory and Applications",
+      "paper": "https://www.cttacn.org.cn/en/article/doi/10.15953/j.ctta.2022.108",
+      "code": "",
+      "order": 4
+    },
+    {
+      "title": "M3NAS: Multi-Scale and Multi-Level Memory-Efficient Neural Architecture Search for Low-Dose CT Denoising",
+      "authors": "Z Lu, W Xia, Y Huang, M Hou, H Chen, J Zhou, H Shan, Y Zhang",
+      "year": 2022,
+      "type": "journal",
+      "venue": "IEEE Transactions on Medical Imaging",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/9936653/",
+      "code": "",
+      "order": 5
+    },
+    {
+      "title": "ERA-WGAT: Edge-enhanced residual autoencoder with a window-based graph attention convolutional network for low-dose CT denoising",
+      "authors": "H Liu, P Liao, H Chen, Y Zhang",
+      "year": 2022,
+      "type": "journal",
+      "venue": "Biomedical Optics Express",
+      "paper": "https://opg.optica.org/boe/fulltext.cfm?uri=boe-13-11-5775&id=509901",
+      "code": "",
+      "order": 6
+    },
+    {
+      "title": "DGRUnit: Dual graph reasoning unit for brain tumor segmentation",
+      "authors": "Q Ma, S Zhou, C Li, F Liu, Y Liu, M Hou, Y Zhang",
+      "year": 2022,
+      "type": "journal",
+      "venue": "Computers in biology and medicine",
+      "paper": "https://www.sciencedirect.com/science/article/pii/S0010482522007879",
+      "code": "",
+      "order": 7
+    },
+    {
+      "title": "Unsupervised bayesian PET reconstruction",
+      "authors": "C Shen, W Xia, H Ye, M Hou, H Chen, Y Liu, J Zhou, Y Zhang",
+      "year": 2022,
+      "type": "journal",
+      "venue": "IEEE Transactions on Radiation and Plasma Medical Sciences",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/9878162/",
+      "code": "https://github.com/Deep-Imaging-Group/Bayesian_PET_Recon",
+      "order": 8
+    },
+    {
+      "title": "PRIOR: Prior-regularized iterative optimization reconstruction for 4D CBCT",
+      "authors": "D Hu, Y Zhang, J Liu, Y Zhang, JL Coatrieux, Y Chen",
+      "year": 2022,
+      "type": "journal",
+      "venue": "IEEE Journal of Biomedical and Health Informatics",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/9866113",
+      "code": "",
+      "order": 9
+    },
+    {
+      "title": "LDP-Net: An unsupervised pansharpening network based on learnable degradation processes",
+      "authors": "J Ni, Z Shao, Z Zhang, M Hou, J Zhou, L Fang, Y Zhang",
+      "year": 2022,
+      "type": "journal",
+      "venue": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/9814841",
+      "code": "",
+      "order": 10
+    },
+    {
+      "title": "Human identification performed with skull’s sphenoid sinus based on deep learning",
+      "authors": "H Wen, W Wu, F Fan, P Liao, H Chen, Y Zhang, Z Deng, W Lv",
+      "year": 2022,
+      "type": "journal",
+      "venue": "International Journal of Legal Medicine",
+      "paper": "https://link.springer.com/article/10.1007/s00414-021-02761-2",
+      "code": "",
+      "order": 11
+    },
+    {
+      "title": "A selective kernel-based cycle-consistent generative adversarial network for unpaired low-dose CT denoising",
+      "authors": "C Tan, M Yang, Z You, H Chen, Y Zhang",
+      "year": 2022,
+      "type": "journal",
+      "venue": "Precision Clinical Medicine",
+      "paper": "https://academic.oup.com/pcm/article/5/2/pbac011/6571262",
+      "code": "",
+      "order": 12
+    },
+    {
+      "title": "A fine-grained network for human identification using panoramic dental images",
+      "authors": "H Chen, C Sun, P Liao, Y Lai, F Fan, Y Lin, Z Deng, Y Zhang",
+      "year": 2022,
+      "type": "journal",
+      "venue": "Patterns",
+      "paper": "https://www.cell.com/patterns/fulltext/S2666-3899(22)00070-8",
+      "code": "",
+      "order": 13
+    },
+    {
+      "title": "IDOL-Net: An interactive dual-domain parallel network for CT metal artifact reduction",
+      "authors": "T Wang, Z Lu, Z Yang, W Xia, M Hou, H Sun, Y Liu, H Chen, J Zhou, Y Zhang",
+      "year": 2022,
+      "type": "journal",
+      "venue": "IEEE Transactions on Radiation and Plasma Medical Sciences",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/9765584",
+      "code": "https://github.com/Deep-Imaging-Group/IDOL-Net",
+      "order": 14
+    },
+    {
+      "title": "Training low dose CT denoising network without high quality reference data",
+      "authors": "J Jing, W Xia, M Hou, H Chen, Y Liu, J Zhou, Y Zhang",
+      "year": 2022,
+      "type": "journal",
+      "venue": "Physics in Medicine & Biology",
+      "paper": "https://iopscience.iop.org/article/10.1088/1361-6560/ac5f70/meta",
+      "code": "",
+      "order": 15
+    },
+    {
+      "title": "DHI-GAN: improving dental-based human identification using generative adversarial networks",
+      "authors": "Y Lin, F Fan, J Zhang, J Zhou, P Liao, H Chen, Z Deng, Y Zhang",
+      "year": 2022,
+      "type": "journal",
+      "venue": "Physics in Medicine & Biology",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/9741851",
+      "code": "",
+      "order": 16
+    },
+    {
+      "title": "FONT-SIR: Fourth-order nonlocal tensor decomposition model for spectral CT image reconstruction",
+      "authors": "X Chen, W Xia, Y Liu, H Chen, J Zhou, Z Zha, B Wen, Y Zhang",
+      "year": 2022,
+      "type": "journal",
+      "venue": "IEEE Transactions on Medical Imaging",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/9726161",
+      "code": "https://github.com/Deep-Imaging-Group/FONT-SIR",
+      "order": 17
+    },
+    {
+      "title": "Iterative reconstruction for low-dose CT using deep gradient priors of generative model",
+      "authors": "Z He, Y Zhang, Y Guan, B Guan, S Niu, Y Zhang, Y Chen, Q Liu",
+      "year": 2022,
+      "type": "journal",
+      "venue": "IEEE Transactions on Radiation and Plasma Medical Sciences",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/9703672",
+      "code": "",
+      "order": 18
+    },
+    {
+      "title": "Multi-task short-term reactive and active load forecasting method based on attention-LSTM model",
+      "authors": "J Qin, Y Zhang, S Fan, X Hu, Y Huang, Z Lu, Y Liu",
+      "year": 2022,
+      "type": "journal",
+      "venue": "International Journal of Electrical Power & Energy Systems",
+      "paper": "https://www.sciencedirect.com/science/article/pii/S0142061521007560",
+      "code": "",
+      "order": 19
+    },
+    {
+      "title": "NFANet: A novel method for weakly supervised water extraction from high-resolution remote-sensing imagery",
+      "authors": "M Lu, L Fang, M Li, B Zhang, Y Zhang, P Ghamisi",
+      "year": 2022,
+      "type": "journal",
+      "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/9668924",
+      "code": "",
+      "order": 20
+    }
+  ],
+  "conference": [
+    {
+      "title": "CORE-lens: Simultaneous communication and object recognition with disentangled-GAN cameras",
+      "authors": "Z Liu, T Zheng, C Hu, Y Yang, Y Sun, Y Zhang, Z Chen, L Chen, J Luo",
+      "year": 2022,
+      "type": "conference",
+      "venue": "Annual International Conference on Mobile Computing And Networking",
+      "paper": "https://dl.acm.org/doi/abs/10.1145/3495243.3560526",
+      "code": "",
+      "order": 1
+    },
+    {
+      "title": "A transformer-based iterative reconstruction model for sparse-view ct reconstruction",
+      "authors": "W Xia, Z Yang, Q Zhou, Z Lu, Z Wang, Y Zhang",
+      "year": 2022,
+      "type": "conference",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+      "paper": "https://link.springer.com/chapter/10.1007/978-3-031-16446-0_75",
+      "code": "",
+      "order": 2
+    },
+    {
+      "title": "Depth completion using geometry-aware embedding",
+      "authors": "H Chen, H Yang, Y Zhang",
+      "year": 2022,
+      "type": "conference",
+      "venue": "International Conference on Robotics and Automation",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/9811556",
+      "code": "",
+      "order": 3
+    },
+    {
+      "title": "Leaders: Learnable deep radial subsampling for mri reconstruction",
+      "authors": "Z Wang, B Li, W Xia, C Shen, M Hou, H Chen, Y Liu, J Zhou, Y Zhang",
+      "year": 2022,
+      "type": "conference",
+      "venue": "International Symposium on Biomedical Imaging",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/9761544",
+      "code": "https://github.com/Deep-Imaging-Group/LEADERS",
+      "order": 4
+    },
+    {
+      "title": "Low-dose CT denoising via neural architecture search",
+      "authors": "Z Lu, W Xia, Y Huang, M Hou, H Chen, H Shan, Y Zhang",
+      "year": 2022,
+      "type": "conference",
+      "venue": "International Symposium on Biomedical Imaging",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/9761544",
+      "code": "",
+      "order": 5
+    },
+    {
+      "title": "Unsupervised PET reconstruction from a Bayesian perspective",
+      "authors": "C Shen, W Xia, H Ye, M Hou, H Chen, Y Liu, J Zhou, Y Zhang",
+      "year": 2022,
+      "type": "conference",
+      "venue": "International Symposium on Biomedical Imaging",
+      "paper": "https://ieeexplore.ieee.org/abstract/document/9761513",
+      "code": "",
+      "order": 6
+    },
+    {
+      "title": "Noise reduction in dental CT images based on generative adversarial network",
+      "authors": "H Shao, H Gu, P Liao, H Chen, Y Zhang",
+      "year": 2022,
+      "type": "conference",
+      "venue": "International Conference on Graphics and Image Processing",
+      "paper": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12083/1208326/Noise-reduction-in-dental-CT-images-based-on-generative-adversarial/10.1117/12.2623120.short3",
+      "code": "",
+      "order": 7
+    }
+  ]
+}

@@ -134,6 +134,8 @@
     }
 
     const publicationManifestPath = './publications/index.json';
+    const publicationVersion = '20260626-publications';
+    const publicationYearCache = {};
 
     function createPublicationLink(label, href, className) {
       if (!href) {
@@ -184,7 +186,7 @@
       return item;
     }
 
-    function createPublicationPanel(year, categoryData) {
+    function createPublicationPanel(year, active) {
       const panel = document.createElement('div');
       panel.className = 'panel';
       panel.style.borderBottom = '1px solid rgba(0, 0, 0, .15)';
@@ -197,13 +199,13 @@
 
       const heading = document.createElement('h4');
       const icon = document.createElement('i');
-      icon.className = `fas ${categoryData.active ? 'fa-arrow-down' : 'fa-arrow-right'} arrow`;
+      icon.className = `fas ${active ? 'fa-arrow-down' : 'fa-arrow-right'} arrow`;
       heading.appendChild(icon);
       heading.appendChild(document.createTextNode(` ${year}`));
       header.appendChild(heading);
 
       const content = document.createElement('div');
-      content.className = `panel-content${categoryData.active ? ' active' : ''}`;
+      content.className = `panel-content${active ? ' active' : ''}`;
 
       const list = document.createElement('ul');
       list.style.marginBottom = '5px';
@@ -216,7 +218,7 @@
     }
 
     async function loadJson(path) {
-      const response = await fetch(`${path}${path.includes('?') ? '&' : '?'}v=20260624-publications`, { cache: 'no-store' });
+      const response = await fetch(`${path}${path.includes('?') ? '&' : '?'}v=${publicationVersion}`, { cache: 'no-store' });
       if (!response.ok) {
         throw new Error(`Failed to load ${path}: ${response.status}`);
       }
@@ -236,15 +238,16 @@
       container.appendChild(headingWrap);
 
       for (const yearData of years) {
-        const categoryData = yearData[category];
-        if (!categoryData || !categoryData.files || !categoryData.files.length) {
+        const yearPublications = publicationYearCache[yearData.year] || await loadJson(`./publications/${yearData.year}.json`);
+        publicationYearCache[yearData.year] = yearPublications;
+        const entries = Array.isArray(yearPublications[category]) ? yearPublications[category] : [];
+        if (!entries.length) {
           continue;
         }
 
-        const { panel, list } = createPublicationPanel(yearData.year, categoryData);
+        const { panel, list } = createPublicationPanel(yearData.year, Boolean(yearData.active));
         container.appendChild(panel);
 
-        const entries = await Promise.all(categoryData.files.map(loadJson));
         entries
           .sort((a, b) => (a.order || 0) - (b.order || 0))
           .forEach(publication => {
