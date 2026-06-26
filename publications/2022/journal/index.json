@@ -1,0 +1,27 @@
+{
+  "year": 2022,
+  "type": "journal",
+  "active": false,
+  "files": [
+    "dream-net-deep-residual-error-iterative-minimization-network-for-sparse-view-ct-reconstruc.json",
+    "mlf-iosc-multi-level-fusion-network-with-independent-operation-search-cell-for-low-dose-ct.json",
+    "learn-recurrent-dual-domain-reconstruction-network-for-compressed-sensing-ct.json",
+    "low-dose-ct-denoising-based-on-subspace-projection-and-edge-enhancement.json",
+    "m3nas-multi-scale-and-multi-level-memory-efficient-neural-architecture-search-for-low-dose.json",
+    "era-wgat-edge-enhanced-residual-autoencoder-with-a-window-based-graph-attention-convolutio.json",
+    "dgrunit-dual-graph-reasoning-unit-for-brain-tumor-segmentation.json",
+    "unsupervised-bayesian-pet-reconstruction.json",
+    "prior-prior-regularized-iterative-optimization-reconstruction-for-4d-cbct.json",
+    "ldp-net-an-unsupervised-pansharpening-network-based-on-learnable-degradation-processes.json",
+    "human-identification-performed-with-skull-s-sphenoid-sinus-based-on-deep-learning.json",
+    "a-selective-kernel-based-cycle-consistent-generative-adversarial-network-for-unpaired-low-.json",
+    "a-fine-grained-network-for-human-identification-using-panoramic-dental-images.json",
+    "idol-net-an-interactive-dual-domain-parallel-network-for-ct-metal-artifact-reduction.json",
+    "training-low-dose-ct-denoising-network-without-high-quality-reference-data.json",
+    "dhi-gan-improving-dental-based-human-identification-using-generative-adversarial-networks.json",
+    "font-sir-fourth-order-nonlocal-tensor-decomposition-model-for-spectral-ct-image-reconstruc.json",
+    "iterative-reconstruction-for-low-dose-ct-using-deep-gradient-priors-of-generative-model.json",
+    "multi-task-short-term-reactive-and-active-load-forecasting-method-based-on-attention-lstm-.json",
+    "nfanet-a-novel-method-for-weakly-supervised-water-extraction-from-high-resolution-remote-s.json"
+  ]
+}

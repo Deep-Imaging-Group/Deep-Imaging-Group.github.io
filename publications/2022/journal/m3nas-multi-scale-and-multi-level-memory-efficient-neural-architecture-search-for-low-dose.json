@@ -1,0 +1,10 @@
+{
+  "title": "M3NAS: Multi-Scale and Multi-Level Memory-Efficient Neural Architecture Search for Low-Dose CT Denoising",
+  "authors": "Z Lu, W Xia, Y Huang, M Hou, H Chen, J Zhou, H Shan, Y Zhang",
+  "year": 2022,
+  "type": "journal",
+  "venue": "IEEE Transactions on Medical Imaging",
+  "paper": "https://ieeexplore.ieee.org/abstract/document/9936653/",
+  "code": "",
+  "order": 5
+}

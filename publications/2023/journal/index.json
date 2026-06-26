@@ -1,0 +1,23 @@
+{
+  "year": 2023,
+  "type": "journal",
+  "active": false,
+  "files": [
+    "fam-former-global-transformer-and-feature-aggregation-module-for-knee-mri-age-estimation.json",
+    "hypernetwork-based-physics-driven-personalized-federated-learning-for-ct-imaging.json",
+    "soul-net-a-sparse-and-low-rank-unrolling-network-for-spectral-ct-image-reconstruction.json",
+    "corediff-contextual-error-modulated-generalized-diffusion-model-for-low-dose-ct-denoising-.json",
+    "dynamic-corrected-split-federated-learning-with-homomorphic-encryption-for-u-shaped-medica.json",
+    "a-review-of-deep-learning-ct-reconstruction-from-incomplete-projection-data.json",
+    "semimar-semi-supervised-learning-for-ct-metal-artifact-reduction.json",
+    "comprehensive-competition-mechanism-in-palmprint-recognition.json",
+    "speckle-denoising-of-optical-coherence-tomography-image-using-residual-encoder-decoder-cyc.json",
+    "regformer-a-local-nonlocal-regularization-based-model-for-sparse-view-ct-reconstruction.json",
+    "co3net-coordinate-aware-contrastive-competitive-neural-network-for-palmprint-recognition.json",
+    "blind-image-quality-assessment-via-deep-response-feature-decomposition-and-aggregation.json",
+    "cross-database-attack-of-different-coding-based-palmprint-templates.json",
+    "physics-model-based-and-data-driven-methods-for-low-dose-computed-tomography-a-survey.json",
+    "deseg-auto-detector-based-segmentation-for-brain-metastases.json",
+    "time-net-transformer-integrated-multi-encoder-network-for-limited-angle-artifact-removal-i.json"
+  ]
+}

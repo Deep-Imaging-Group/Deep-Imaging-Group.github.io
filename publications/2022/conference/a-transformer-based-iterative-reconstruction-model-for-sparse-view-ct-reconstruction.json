@@ -1,0 +1,10 @@
+{
+  "title": "A transformer-based iterative reconstruction model for sparse-view ct reconstruction",
+  "authors": "W Xia, Z Yang, Q Zhou, Z Lu, Z Wang, Y Zhang",
+  "year": 2022,
+  "type": "conference",
+  "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+  "paper": "https://link.springer.com/chapter/10.1007/978-3-031-16446-0_75",
+  "code": "",
+  "order": 2
+}

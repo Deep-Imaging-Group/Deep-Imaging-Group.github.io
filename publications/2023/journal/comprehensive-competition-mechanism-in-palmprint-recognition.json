@@ -1,0 +1,10 @@
+{
+  "title": "Comprehensive competition mechanism in palmprint recognition",
+  "authors": "Z Yang, H Huangfu, L Leng, B Zhang, ABJ Teoh, Y Zhang",
+  "year": 2023,
+  "type": "journal",
+  "venue": "IEEE Transactions on Information Forensics and Security",
+  "paper": "https://ieeexplore.ieee.org/abstract/document/10223233",
+  "code": "https://github.com/Zi-YuanYang/CCNet",
+  "order": 8
+}

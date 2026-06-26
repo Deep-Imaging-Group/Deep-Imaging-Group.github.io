@@ -1,0 +1,10 @@
+{
+  "title": "EVIL: Evidential inference learning for trustworthy semi-supervised medical image segmentation",
+  "authors": "Y Chen, Z Yang, C Shen, Z Wang, Y Qin, Y Zhang",
+  "year": 2023,
+  "type": "conference",
+  "venue": "IEEE International Symposium on Biomedical Imaging",
+  "paper": "https://ieeexplore.ieee.org/abstract/document/10230589",
+  "code": "https://github.com/CYYukio/EVidential-Inference-Learning",
+  "order": 7
+}

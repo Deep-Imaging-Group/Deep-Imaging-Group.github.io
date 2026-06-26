@@ -1,0 +1,10 @@
+{
+  "title": "DeSeg: auto detector-based segmentation for brain metastases",
+  "authors": "H Yu, Z Zhang, W Xia, Y Liu, L Liu, W Luo, J Zhou, Y Zhang",
+  "year": 2023,
+  "type": "journal",
+  "venue": "Physics in Medicine & Biology",
+  "paper": "https://iopscience.iop.org/article/10.1088/1361-6560/acace7/meta",
+  "code": "",
+  "order": 15
+}

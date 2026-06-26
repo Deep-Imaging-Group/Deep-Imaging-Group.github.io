@@ -1,0 +1,10 @@
+{
+  "title": "Hypernetwork-based physics-driven personalized federated learning for CT imaging",
+  "authors": "Z Yang, W Xia, Z Lu, Y Chen, X Li, Y Zhang",
+  "year": 2023,
+  "type": "journal",
+  "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+  "paper": "https://ieeexplore.ieee.org/abstract/document/10361833",
+  "code": "https://github.com/Zi-YuanYang/HyperFed",
+  "order": 2
+}

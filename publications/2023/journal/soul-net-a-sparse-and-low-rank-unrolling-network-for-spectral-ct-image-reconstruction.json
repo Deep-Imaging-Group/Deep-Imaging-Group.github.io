@@ -1,0 +1,10 @@
+{
+  "title": "SOUL-net: A sparse and low-rank unrolling network for spectral CT image reconstruction",
+  "authors": "X Chen, W Xia, Z Yang, H Chen, Y Liu, J Zhou, Z Wang, Y Chen, B Wen, Y Zhang",
+  "year": 2023,
+  "type": "journal",
+  "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+  "paper": "https://ieeexplore.ieee.org/abstract/document/10271326",
+  "code": "",
+  "order": 3
+}

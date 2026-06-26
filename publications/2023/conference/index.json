@@ -1,0 +1,15 @@
+{
+  "year": 2023,
+  "type": "conference",
+  "active": false,
+  "files": [
+    "pet-image-denoising-with-score-based-diffusion-probabilistic-models.json",
+    "inter-slice-consistency-for-unpaired-low-dose-ct-denoising-using-boosted-contrastive-learn.json",
+    "building-a-bridge-close-the-domain-gap-in-ct-metal-artifact-reduction.json",
+    "ascon-anatomy-aware-supervised-contrastive-learning-framework-for-low-dose-ct-denoising.json",
+    "a-robust-prototype-free-retrieval-method-for-automatic-check-out.json",
+    "stay-in-the-middle-a-semi-supervised-model-for-ct-metal-artifact-reduction.json",
+    "evil-evidential-inference-learning-for-trustworthy-semi-supervised-medical-image-segmentat.json",
+    "dynamic-focus-mechanism-based-dual-domain-reconstruction-network-for-accelerated-mri.json"
+  ]
+}

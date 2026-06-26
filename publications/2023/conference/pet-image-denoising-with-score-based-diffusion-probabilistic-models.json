@@ -1,0 +1,10 @@
+{
+  "title": "PET image denoising with score-based diffusion probabilistic models",
+  "authors": "C Shen, Z Yang, Y Zhang",
+  "year": 2023,
+  "type": "conference",
+  "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+  "paper": "https://link.springer.com/chapter/10.1007/978-3-031-43907-0_26",
+  "code": "https://github.com/Deep-Imaging-Group/BC_DPM",
+  "order": 1
+}

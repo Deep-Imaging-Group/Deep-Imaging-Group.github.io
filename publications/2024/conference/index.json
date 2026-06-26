@@ -1,0 +1,10 @@
+{
+  "year": 2024,
+  "type": "conference",
+  "active": false,
+  "files": [
+    "textual-inversion-and-self-supervised-refinement-for-radiology-report-generation.json",
+    "inject-backdoor-in-measured-data-to-jeopardize-full-stack-medical-image-analysis-system.json",
+    "point-segment-and-count-a-generalized-framework-for-object-counting.json"
+  ]
+}

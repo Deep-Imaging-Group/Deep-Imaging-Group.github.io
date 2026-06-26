@@ -1,0 +1,10 @@
+{
+  "title": "Dynamic corrected split federated learning with homomorphic encryption for u-shaped medical image networks",
+  "authors": "Z Yang, Y Chen, H Huangfu, M Ran, H Wang, X Li, Y Zhang",
+  "year": 2023,
+  "type": "journal",
+  "venue": "IEEE Journal of Biomedical and Health Informatics",
+  "paper": "https://ieeexplore.ieee.org/abstract/document/10256094",
+  "code": "https://github.com/Zi-YuanYang/DC-SFL",
+  "order": 5
+}

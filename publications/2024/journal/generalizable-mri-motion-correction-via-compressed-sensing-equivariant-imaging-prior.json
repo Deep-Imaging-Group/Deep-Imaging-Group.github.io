@@ -1,0 +1,10 @@
+{
+  "title": "Generalizable MRI motion correction via compressed sensing equivariant imaging prior",
+  "authors": "Z Wang, M Ran, Z Yang, H Yu, J Jin, T Wang, J Lu, Y Zhang",
+  "year": 2024,
+  "type": "journal",
+  "venue": "IEEE Transactions on Circuits and Systems for Video Technology",
+  "paper": "https://ieeexplore.ieee.org/abstract/document/10606502",
+  "code": "https://github.com/wangzhiwen-scu/EIP4MoCo",
+  "order": 13
+}

@@ -1,0 +1,10 @@
+{
+  "title": "NFANet: A novel method for weakly supervised water extraction from high-resolution remote-sensing imagery",
+  "authors": "M Lu, L Fang, M Li, B Zhang, Y Zhang, P Ghamisi",
+  "year": 2022,
+  "type": "journal",
+  "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+  "paper": "https://ieeexplore.ieee.org/abstract/document/9668924",
+  "code": "",
+  "order": 20
+}

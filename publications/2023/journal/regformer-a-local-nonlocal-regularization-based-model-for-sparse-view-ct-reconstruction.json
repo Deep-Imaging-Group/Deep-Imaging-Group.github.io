@@ -1,0 +1,10 @@
+{
+  "title": "RegFormer: A local–nonlocal regularization-based model for sparse-view CT reconstruction",
+  "authors": "W Xia, Z Yang, Z Lu, Z Wang, Y Zhang",
+  "year": 2023,
+  "type": "journal",
+  "venue": "IEEE Transactions on Radiation and Plasma Medical Sciences",
+  "paper": "https://ieeexplore.ieee.org/abstract/document/10138692/",
+  "code": "https://github.com/Deep-Imaging-Group/RegFormer",
+  "order": 10
+}

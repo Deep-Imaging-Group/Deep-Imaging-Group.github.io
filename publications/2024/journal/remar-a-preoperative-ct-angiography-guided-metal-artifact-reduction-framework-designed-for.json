@@ -1,0 +1,10 @@
+{
+  "title": "ReMAR: a preoperative CT angiography guided metal artifact reduction framework designed for follow-up CTA of endovascular coiling",
+  "authors": "Y Zhang, L Liu, H Yu, T Wang, Y Zhang, Y Liu",
+  "year": 2024,
+  "type": "journal",
+  "venue": "Physics in Medicine & Biology",
+  "paper": "https://iopscience.iop.org/article/10.1088/1361-6560/ad5ef4/meta",
+  "code": "https://github.com/wangzhiwen-scu/EIP4MoCo",
+  "order": 14
+}

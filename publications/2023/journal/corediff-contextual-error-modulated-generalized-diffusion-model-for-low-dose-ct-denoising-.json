@@ -1,0 +1,10 @@
+{
+  "title": "CoreDiff: Contextual error-modulated generalized diffusion model for low-dose CT denoising and generalization",
+  "authors": "Q Gao, Z Li, J Zhang, Y Zhang, H Shan",
+  "year": 2023,
+  "type": "journal",
+  "venue": "IEEE Transactions on Medical Imaging",
+  "paper": "https://ieeexplore.ieee.org/abstract/document/10268250",
+  "code": "https://github.com/qgao21/CoreDiff",
+  "order": 4
+}

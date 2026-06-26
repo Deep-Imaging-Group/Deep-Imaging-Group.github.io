@@ -1,0 +1,10 @@
+{
+  "title": "A dual-level cancelable framework for palmprint verification and hack-proof data storage",
+  "authors": "Z Yang, M Kang, ABJ Teoh, C Gao, W Chen, B Zhang, Y Zhang",
+  "year": 2024,
+  "type": "journal",
+  "venue": "IEEE Transactions on Information Forensics and Security",
+  "paper": "https://ieeexplore.ieee.org/abstract/document/10681118",
+  "code": "https://github.com/Zi-YuanYang/DCPV",
+  "order": 8
+}

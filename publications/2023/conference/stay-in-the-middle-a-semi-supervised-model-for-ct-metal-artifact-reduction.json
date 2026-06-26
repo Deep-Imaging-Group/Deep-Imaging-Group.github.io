@@ -1,0 +1,10 @@
+{
+  "title": "Stay in the middle: A semi-supervised model for CT metal artifact reduction",
+  "authors": "T Wang, H Yu, Z Lu, Z Zhang, J Zhou, Y Zhang",
+  "year": 2023,
+  "type": "conference",
+  "venue": "IEEE International Conference on Acoustics, Speech and Signal Processing",
+  "paper": "https://ieeexplore.ieee.org/abstract/document/10095681",
+  "code": "",
+  "order": 6
+}

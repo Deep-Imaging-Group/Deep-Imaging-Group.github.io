@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "type": "conference",
+  "active": false,
+  "files": [
+    "core-lens-simultaneous-communication-and-object-recognition-with-disentangled-gan-cameras.json",
+    "a-transformer-based-iterative-reconstruction-model-for-sparse-view-ct-reconstruction.json",
+    "depth-completion-using-geometry-aware-embedding.json",
+    "leaders-learnable-deep-radial-subsampling-for-mri-reconstruction.json",
+    "low-dose-ct-denoising-via-neural-architecture-search.json",
+    "unsupervised-pet-reconstruction-from-a-bayesian-perspective.json",
+    "noise-reduction-in-dental-ct-images-based-on-generative-adversarial-network.json"
+  ]
+}

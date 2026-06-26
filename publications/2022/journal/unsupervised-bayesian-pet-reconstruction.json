@@ -1,0 +1,10 @@
+{
+  "title": "Unsupervised bayesian PET reconstruction",
+  "authors": "C Shen, W Xia, H Ye, M Hou, H Chen, Y Liu, J Zhou, Y Zhang",
+  "year": 2022,
+  "type": "journal",
+  "venue": "IEEE Transactions on Radiation and Plasma Medical Sciences",
+  "paper": "https://ieeexplore.ieee.org/abstract/document/9878162/",
+  "code": "https://github.com/Deep-Imaging-Group/Bayesian_PET_Recon",
+  "order": 8
+}

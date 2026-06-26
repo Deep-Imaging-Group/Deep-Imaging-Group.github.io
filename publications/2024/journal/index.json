@@ -1,0 +1,26 @@
+{
+  "year": 2024,
+  "type": "journal",
+  "active": false,
+  "files": [
+    "uniada-domain-unifying-and-adapting-network-for-generalizable-medical-image-segmentation.json",
+    "self-supervised-content-consistent-contrast-enhancement-framework-for-ultrafast-plane-wave.json",
+    "solving-zero-shot-sparse-view-ct-reconstruction-with-variational-score-solver.json",
+    "pridediff-physics-regularized-generalized-diffusion-model-for-ct-reconstruction.json",
+    "physics-driven-spectrum-consistent-federated-learning-for-palmprint-verification.json",
+    "provably-convergent-learned-inexact-descent-algorithm-for-low-dose-ct-reconstruction.json",
+    "test-time-adaptation-via-orthogonal-meta-learning-for-medical-imaging.json",
+    "a-dual-level-cancelable-framework-for-palmprint-verification-and-hack-proof-data-storage.json",
+    "gradient-guided-network-with-fourier-enhancement-for-glioma-segmentation-in-multimodal-3d-.json",
+    "bi-constraints-diffusion-a-conditional-diffusion-model-with-degradation-guidance-for-metal.json",
+    "prx-change-enhancing-remote-sensing-change-detection-through-progressive-feature-refinemen.json",
+    "weakly-supervised-low-dose-computed-tomography-denoising-based-on-generative-adversarial-n.json",
+    "generalizable-mri-motion-correction-via-compressed-sensing-equivariant-imaging-prior.json",
+    "remar-a-preoperative-ct-angiography-guided-metal-artifact-reduction-framework-designed-for.json",
+    "multiple-organ-segmentation-framework-for-brain-metastasis-radiotherapy.json",
+    "evidence-based-uncertainty-aware-semi-supervised-medical-image-segmentation.json",
+    "promoting-fast-mr-imaging-pipeline-by-full-stack-ai.json",
+    "bidirectional-condition-diffusion-probabilistic-models-for-pet-image-denoising.json",
+    "progressive-dual-domain-transfer-cyclegan-for-unsupervised-mri-reconstruction.json"
+  ]
+}

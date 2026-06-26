@@ -1,0 +1,136 @@
+{
+  "years": [
+    {
+      "year": 2025,
+      "journal": {
+        "active": true,
+        "files": [
+          "publications/2025/journal/a-novel-privacy-enhancing-framework-for-low-dose-ct-denoising.json",
+          "publications/2025/journal/praise-net-deep-projection-domain-data-consistent-learning-network-for-cbct-metal-artifact.json"
+        ]
+      },
+      "conference": {
+        "active": true,
+        "files": [
+          "publications/2025/conference/fedrir-rethinking-information-representation-in-federated-learning.json",
+          "publications/2025/conference/caw-cl-cascaded-adaptive-weighted-contrastive-learning-for-unsupervised-ultrasound-plane-w.json",
+          "publications/2025/conference/modality-modulation-and-dual-consistency-for-multi-modality-semi-supervised-medical-image-.json",
+          "publications/2025/conference/plaintext-free-deep-learning-for-privacy-preserving-medical-image-analysis-through-frequen.json",
+          "publications/2025/conference/incorporating-improved-sinusoidal-threshold-based-semi-supervised-method-and-diffusion-mod.json"
+        ]
+      }
+    },
+    {
+      "year": 2024,
+      "journal": {
+        "active": false,
+        "files": [
+          "publications/2024/journal/uniada-domain-unifying-and-adapting-network-for-generalizable-medical-image-segmentation.json",
+          "publications/2024/journal/self-supervised-content-consistent-contrast-enhancement-framework-for-ultrafast-plane-wave.json",
+          "publications/2024/journal/solving-zero-shot-sparse-view-ct-reconstruction-with-variational-score-solver.json",
+          "publications/2024/journal/pridediff-physics-regularized-generalized-diffusion-model-for-ct-reconstruction.json",
+          "publications/2024/journal/physics-driven-spectrum-consistent-federated-learning-for-palmprint-verification.json",
+          "publications/2024/journal/provably-convergent-learned-inexact-descent-algorithm-for-low-dose-ct-reconstruction.json",
+          "publications/2024/journal/test-time-adaptation-via-orthogonal-meta-learning-for-medical-imaging.json",
+          "publications/2024/journal/a-dual-level-cancelable-framework-for-palmprint-verification-and-hack-proof-data-storage.json",
+          "publications/2024/journal/gradient-guided-network-with-fourier-enhancement-for-glioma-segmentation-in-multimodal-3d-.json",
+          "publications/2024/journal/bi-constraints-diffusion-a-conditional-diffusion-model-with-degradation-guidance-for-metal.json",
+          "publications/2024/journal/prx-change-enhancing-remote-sensing-change-detection-through-progressive-feature-refinemen.json",
+          "publications/2024/journal/weakly-supervised-low-dose-computed-tomography-denoising-based-on-generative-adversarial-n.json",
+          "publications/2024/journal/generalizable-mri-motion-correction-via-compressed-sensing-equivariant-imaging-prior.json",
+          "publications/2024/journal/remar-a-preoperative-ct-angiography-guided-metal-artifact-reduction-framework-designed-for.json",
+          "publications/2024/journal/multiple-organ-segmentation-framework-for-brain-metastasis-radiotherapy.json",
+          "publications/2024/journal/evidence-based-uncertainty-aware-semi-supervised-medical-image-segmentation.json",
+          "publications/2024/journal/promoting-fast-mr-imaging-pipeline-by-full-stack-ai.json",
+          "publications/2024/journal/bidirectional-condition-diffusion-probabilistic-models-for-pet-image-denoising.json",
+          "publications/2024/journal/progressive-dual-domain-transfer-cyclegan-for-unsupervised-mri-reconstruction.json"
+        ]
+      },
+      "conference": {
+        "active": false,
+        "files": [
+          "publications/2024/conference/textual-inversion-and-self-supervised-refinement-for-radiology-report-generation.json",
+          "publications/2024/conference/inject-backdoor-in-measured-data-to-jeopardize-full-stack-medical-image-analysis-system.json",
+          "publications/2024/conference/point-segment-and-count-a-generalized-framework-for-object-counting.json"
+        ]
+      }
+    },
+    {
+      "year": 2023,
+      "journal": {
+        "active": false,
+        "files": [
+          "publications/2023/journal/fam-former-global-transformer-and-feature-aggregation-module-for-knee-mri-age-estimation.json",
+          "publications/2023/journal/hypernetwork-based-physics-driven-personalized-federated-learning-for-ct-imaging.json",
+          "publications/2023/journal/soul-net-a-sparse-and-low-rank-unrolling-network-for-spectral-ct-image-reconstruction.json",
+          "publications/2023/journal/corediff-contextual-error-modulated-generalized-diffusion-model-for-low-dose-ct-denoising-.json",
+          "publications/2023/journal/dynamic-corrected-split-federated-learning-with-homomorphic-encryption-for-u-shaped-medica.json",
+          "publications/2023/journal/a-review-of-deep-learning-ct-reconstruction-from-incomplete-projection-data.json",
+          "publications/2023/journal/semimar-semi-supervised-learning-for-ct-metal-artifact-reduction.json",
+          "publications/2023/journal/comprehensive-competition-mechanism-in-palmprint-recognition.json",
+          "publications/2023/journal/speckle-denoising-of-optical-coherence-tomography-image-using-residual-encoder-decoder-cyc.json",
+          "publications/2023/journal/regformer-a-local-nonlocal-regularization-based-model-for-sparse-view-ct-reconstruction.json",
+          "publications/2023/journal/co3net-coordinate-aware-contrastive-competitive-neural-network-for-palmprint-recognition.json",
+          "publications/2023/journal/blind-image-quality-assessment-via-deep-response-feature-decomposition-and-aggregation.json",
+          "publications/2023/journal/cross-database-attack-of-different-coding-based-palmprint-templates.json",
+          "publications/2023/journal/physics-model-based-and-data-driven-methods-for-low-dose-computed-tomography-a-survey.json",
+          "publications/2023/journal/deseg-auto-detector-based-segmentation-for-brain-metastases.json",
+          "publications/2023/journal/time-net-transformer-integrated-multi-encoder-network-for-limited-angle-artifact-removal-i.json"
+        ]
+      },
+      "conference": {
+        "active": false,
+        "files": [
+          "publications/2023/conference/pet-image-denoising-with-score-based-diffusion-probabilistic-models.json",
+          "publications/2023/conference/inter-slice-consistency-for-unpaired-low-dose-ct-denoising-using-boosted-contrastive-learn.json",
+          "publications/2023/conference/building-a-bridge-close-the-domain-gap-in-ct-metal-artifact-reduction.json",
+          "publications/2023/conference/ascon-anatomy-aware-supervised-contrastive-learning-framework-for-low-dose-ct-denoising.json",
+          "publications/2023/conference/a-robust-prototype-free-retrieval-method-for-automatic-check-out.json",
+          "publications/2023/conference/stay-in-the-middle-a-semi-supervised-model-for-ct-metal-artifact-reduction.json",
+          "publications/2023/conference/evil-evidential-inference-learning-for-trustworthy-semi-supervised-medical-image-segmentat.json",
+          "publications/2023/conference/dynamic-focus-mechanism-based-dual-domain-reconstruction-network-for-accelerated-mri.json"
+        ]
+      }
+    },
+    {
+      "year": 2022,
+      "journal": {
+        "active": false,
+        "files": [
+          "publications/2022/journal/dream-net-deep-residual-error-iterative-minimization-network-for-sparse-view-ct-reconstruc.json",
+          "publications/2022/journal/mlf-iosc-multi-level-fusion-network-with-independent-operation-search-cell-for-low-dose-ct.json",
+          "publications/2022/journal/learn-recurrent-dual-domain-reconstruction-network-for-compressed-sensing-ct.json",
+          "publications/2022/journal/low-dose-ct-denoising-based-on-subspace-projection-and-edge-enhancement.json",
+          "publications/2022/journal/m3nas-multi-scale-and-multi-level-memory-efficient-neural-architecture-search-for-low-dose.json",
+          "publications/2022/journal/era-wgat-edge-enhanced-residual-autoencoder-with-a-window-based-graph-attention-convolutio.json",
+          "publications/2022/journal/dgrunit-dual-graph-reasoning-unit-for-brain-tumor-segmentation.json",
+          "publications/2022/journal/unsupervised-bayesian-pet-reconstruction.json",
+          "publications/2022/journal/prior-prior-regularized-iterative-optimization-reconstruction-for-4d-cbct.json",
+          "publications/2022/journal/ldp-net-an-unsupervised-pansharpening-network-based-on-learnable-degradation-processes.json",
+          "publications/2022/journal/human-identification-performed-with-skull-s-sphenoid-sinus-based-on-deep-learning.json",
+          "publications/2022/journal/a-selective-kernel-based-cycle-consistent-generative-adversarial-network-for-unpaired-low-.json",
+          "publications/2022/journal/a-fine-grained-network-for-human-identification-using-panoramic-dental-images.json",
+          "publications/2022/journal/idol-net-an-interactive-dual-domain-parallel-network-for-ct-metal-artifact-reduction.json",
+          "publications/2022/journal/training-low-dose-ct-denoising-network-without-high-quality-reference-data.json",
+          "publications/2022/journal/dhi-gan-improving-dental-based-human-identification-using-generative-adversarial-networks.json",
+          "publications/2022/journal/font-sir-fourth-order-nonlocal-tensor-decomposition-model-for-spectral-ct-image-reconstruc.json",
+          "publications/2022/journal/iterative-reconstruction-for-low-dose-ct-using-deep-gradient-priors-of-generative-model.json",
+          "publications/2022/journal/multi-task-short-term-reactive-and-active-load-forecasting-method-based-on-attention-lstm-.json",
+          "publications/2022/journal/nfanet-a-novel-method-for-weakly-supervised-water-extraction-from-high-resolution-remote-s.json"
+        ]
+      },
+      "conference": {
+        "active": false,
+        "files": [
+          "publications/2022/conference/core-lens-simultaneous-communication-and-object-recognition-with-disentangled-gan-cameras.json",
+          "publications/2022/conference/a-transformer-based-iterative-reconstruction-model-for-sparse-view-ct-reconstruction.json",
+          "publications/2022/conference/depth-completion-using-geometry-aware-embedding.json",
+          "publications/2022/conference/leaders-learnable-deep-radial-subsampling-for-mri-reconstruction.json",
+          "publications/2022/conference/low-dose-ct-denoising-via-neural-architecture-search.json",
+          "publications/2022/conference/unsupervised-pet-reconstruction-from-a-bayesian-perspective.json",
+          "publications/2022/conference/noise-reduction-in-dental-ct-images-based-on-generative-adversarial-network.json"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Textual inversion and self-supervised refinement for radiology report generation",
+  "authors": "Y Luo, H Li, X Wu, M Cao, X Huang, Z Zhu, P Liao, H Chen, Y Zhang",
+  "year": 2024,
+  "type": "conference",
+  "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+  "paper": "https://link.springer.com/chapter/10.1007/978-3-031-72086-4_64",
+  "code": "",
+  "order": 1
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Self-supervised content-consistent contrast enhancement framework for ultrafast plane-wave imaging",
+  "authors": "A Wang, J Lu, Z Yang, W Liang, H Zhuang, Y Zhang",
+  "year": 2024,
+  "type": "journal",
+  "venue": "IEEE Transactions on Instrumentation and Measurement",
+  "paper": "https://ieeexplore.ieee.org/abstract/document/10711901",
+  "code": "https://github.com/ Wang-aohua/SC3E",
+  "order": 2
+}

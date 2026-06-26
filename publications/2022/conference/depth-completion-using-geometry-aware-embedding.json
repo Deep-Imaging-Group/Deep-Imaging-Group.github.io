@@ -1,0 +1,10 @@
+{
+  "title": "Depth completion using geometry-aware embedding",
+  "authors": "H Chen, H Yang, Y Zhang",
+  "year": 2022,
+  "type": "conference",
+  "venue": "International Conference on Robotics and Automation",
+  "paper": "https://ieeexplore.ieee.org/abstract/document/9811556",
+  "code": "",
+  "order": 3
+}

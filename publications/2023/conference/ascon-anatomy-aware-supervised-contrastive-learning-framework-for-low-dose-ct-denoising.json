@@ -1,0 +1,10 @@
+{
+  "title": "ASCON: Anatomy-Aware Supervised Contrastive Learning Framework for Low-Dose CT Denoising",
+  "authors": "Z Chen, Q Gao, Y Zhang, H Shan",
+  "year": 2023,
+  "type": "conference",
+  "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+  "paper": "https://link.springer.com/chapter/10.1007/978-3-031-43999-5_34",
+  "code": "https://github.com/hao1635/ASCON",
+  "order": 4
+}
