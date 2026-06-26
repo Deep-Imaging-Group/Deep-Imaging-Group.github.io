@@ -460,6 +460,37 @@ button {
   padding: 15px;
 }
 
+.news-more {
+  display: flex;
+  justify-content: center;
+  padding: 18px 0 4px;
+}
+
+.news-more-button {
+  border: 1px solid rgba(180, 16, 10, 0.22);
+  border-radius: 999px;
+  background: #fff;
+  color: rgb(180, 16, 10);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.news-more-button:hover,
+.news-more-button:focus {
+  border-color: rgba(180, 16, 10, 0.5);
+  background: rgba(180, 16, 10, 0.06);
+  outline: none;
+}
+
+.news-more-button:disabled {
+  cursor: default;
+  opacity: 0.65;
+}
+
 .arrow {
   /* font-size: 20px; */
   transition: transform 0.3s ease-in-out;
