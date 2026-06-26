@@ -1,0 +1,366 @@
+{
+  "professors": [
+    {
+      "image": "./members/member_images/Yi Zhang 2.webp",
+      "name": "Yi Zhang (张意)",
+      "email": "yzhang@scu.edu.cn",
+      "period": "",
+      "description": "Professor, principal investigator of Deep Imaging Group (DIG)",
+      "link": "https://ccs.scu.edu.cn/info/1052/2889.htm"
+    },
+    {
+      "image": "./members/member_images/Guanyu Xing.webp",
+      "name": "Guanyu Xing (邢冠宇)",
+      "email": "xingguanyu@scu.edu.cn",
+      "period": "",
+      "description": "Associate Professor",
+      "link": "https://ccs.scu.edu.cn/info/1053/3845.htm"
+    }
+  ],
+  "post_docs": [
+    {
+      "image": "./members/member_images/Jingfeng Lu.webp",
+      "name": "Jingfeng Lu (路景枫)",
+      "email": "",
+      "period": "(Fall 2023 - )",
+      "description": "Ph.D.",
+      "link": "https://jyhong.gitlab.io"
+    }
+  ],
+  "phd_students": [
+    {
+      "image": "./members/member_images/Jie Jing.webp",
+      "name": "Jie Jing (敬颉)",
+      "email": "",
+      "period": "(Fall 2022 - )",
+      "description": "",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Yingyu Chen.webp",
+      "name": "Yingyu Chen (陈迎语)",
+      "email": "cyy262511@gmail.com",
+      "period": "(Fall 2021 - )",
+      "description": "",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Maosong Ran.webp",
+      "name": "Maosong Ran (冉茂松)",
+      "email": "maosongran@gmail.com",
+      "period": "(Fall 2022 - )",
+      "description": "",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Mengyu Sun.webp",
+      "name": "Mengyu Sun (孙梦雨)",
+      "email": "mysun2001999@163.com",
+      "period": "(Fall 2023 - )",
+      "description": "",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Yongqiang Huang.webp",
+      "name": "Yongqiang Huang (黄永强)",
+      "email": "yqhuang2912@gmail.com",
+      "period": "(Fall 2024 - )",
+      "description": "",
+      "link": "https://tsmotlp.github.io/"
+    },
+    {
+      "image": "./members/member_images/Fengzhi Xu.webp",
+      "name": "Fengzhi Xu (徐凤智)",
+      "email": "",
+      "period": "(Fall 2024 - )",
+      "description": "",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Yan Liang.webp",
+      "name": "Yan Liang (梁艳)",
+      "email": "2910166005@qq.com",
+      "period": "(Fall 2025 - )",
+      "description": "",
+      "link": ""
+    }
+  ],
+  "ms_students": [
+    {
+      "image": "./members/member_images/Chenke Zhang.webp",
+      "name": "Chenke Zhang (张晨珂)",
+      "email": "",
+      "period": "(Fall 2025 - )",
+      "description": "",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Ruiyu Liu.jpg",
+      "name": "Ruiyu Liu (刘瑞钰)",
+      "email": "",
+      "period": "(Fall 2025 - )",
+      "description": "",
+      "link": ""
+    }
+  ],
+  "undergraduate_students": [
+    {
+      "image": "",
+      "name": "Jiaxun Guo (郭珈汛)",
+      "email": "",
+      "period": "Aug 2024 - present",
+      "description": "cyber science and engineering",
+      "link": ""
+    },
+    {
+      "image": "",
+      "name": "Zhuxin Lei (雷竺鑫)",
+      "email": "",
+      "period": "Aug 2024 - present",
+      "description": "cyber science and engineering",
+      "link": ""
+    },
+    {
+      "image": "",
+      "name": "Lang Yuan (袁浪)",
+      "email": "",
+      "period": "Aug 2024 - present",
+      "description": "cyber science and engineering",
+      "link": ""
+    }
+  ],
+  "alumni": [
+    {
+      "image": "./members/member_images/Tao Wang.webp",
+      "name": "Tao Wang (汪涛)",
+      "email": "",
+      "period": "(Fall 2022 - Summer 2026)",
+      "description": "",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Zexin Lu.webp",
+      "name": "Zexin Lu (陆泽欣)",
+      "email": "",
+      "period": "(Fall 2018 - Fall 2025)",
+      "description": "Current: Hunyuan, Tencent",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Ziyuan Yang.webp",
+      "name": "Ziyuan Yang (杨子元)",
+      "email": "cziyuanyang@gmail.com",
+      "period": "(Fall 2021 - Summer 2025)",
+      "description": "Ph.D.; Current: Post Doc, NTU, Singapore",
+      "link": "https://zi-yuanyang.github.io/"
+    },
+    {
+      "image": "./members/member_images/Hui Wang.webp",
+      "name": "Hui Wang (王晖)",
+      "email": "",
+      "period": "(Fall 2020 - Summer 2025)",
+      "description": "Ph.D.; Current: ICBC",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Zhongzhou Zhang.webp",
+      "name": "Zhongzhou Zhang (张中洲)",
+      "email": "zz_zhang@stu.scu.edu.cn",
+      "period": "(Fall 2021 - Summer 2025)",
+      "description": "Ph.D.; Current: A research institute in Southwest China (Confidential)",
+      "link": "https://scholar.google.com.hk/citations?user=sqw-rJwAAAAJ&hl=zh-CN&oi=ao"
+    },
+    {
+      "image": "./members/member_images/Wenjun Xia.webp",
+      "name": "Wenjun Xia (夏文军)",
+      "email": "",
+      "period": "Fall 2017 - Fall 2022",
+      "description": "Ph.D.; Current: Post Doc, Rensselaer Polytechnic Institute",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Zhiwen Wang.webp",
+      "name": "Zhiwen Wang (王志文)",
+      "email": "",
+      "period": "Fall 2019 - Fall 2024",
+      "description": "Ph.D.; Current: Lecture, SWPU",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Hui Yu.webp",
+      "name": "Hui Yu (余慧)",
+      "email": "",
+      "period": "Fall 2019 - Fall 2024",
+      "description": "Ph.D.; Current: Editor, Sichuan Institute of Computer Sciences",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Yixin Chen.webp",
+      "name": "Yixin Chen (陈毅新)",
+      "email": "",
+      "period": "(Fall 2023 - Summer 2026)",
+      "description": "M.S.; Current: BYD, Shenzhen",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Yi Xie.webp",
+      "name": "Yi Xie (谢毅)",
+      "email": "",
+      "period": "(Fall 2023 - Summer 2026)",
+      "description": "M.S.; Current: A research institute in Southwest China (Confidential)",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Maoqi Shi.webp",
+      "name": "Maoqi Shi (石茂琪)",
+      "email": "2608376349@qq.com",
+      "period": "(Fall 2023 - Summer 2026)",
+      "description": "M.S.; Current: BOCB",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Wenzhuo Liang.webp",
+      "name": "Wenzhuo Liang (梁文卓)",
+      "email": "2022223045213@stu.scu.edu.cn",
+      "period": "(Fall 2022 - Summer 2025)",
+      "description": "M.S.; Current: CMB",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Aohua Wang.webp",
+      "name": "Aohua Wang (王澳华)",
+      "email": "",
+      "period": "(Fall 2022 - Summer 2025)",
+      "description": "M.S.; Current: Alibaba",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Huijie Huangfu.webp",
+      "name": "Huijie Huangfu (皇甫慧杰)",
+      "email": "",
+      "period": "Fall 2021 - Summer 2024",
+      "description": "M.S.; Current: TMALL, Alibaba",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Zhongxian Wang.webp",
+      "name": "Zhongxian Wang (王钟贤)",
+      "email": "",
+      "period": "Fall 2021 - Summer 2024",
+      "description": "M.S.; Current: State Grid Corporation of China",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Yili Wei.webp",
+      "name": "Yili Wei (魏屹立)",
+      "email": "",
+      "period": "Fall 2021 - Summer 2024",
+      "description": "M.S.; Current: Alibaba",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Bowen Li.webp",
+      "name": "Bowen Li (李博文)",
+      "email": "",
+      "period": "Fall 2020 - Summer 2023",
+      "description": "M.S.; Current: Alibaba",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Xiang Chen.webp",
+      "name": "Xiang Chen (陈祥)",
+      "email": "",
+      "period": "Fall 2020 - Summer 2023",
+      "description": "M.S.; Current: Alibaba",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Chenyu Shen.webp",
+      "name": "Chenyu Shen (沈晨煜)",
+      "email": "",
+      "period": "Fall 2020 - Summer 2023",
+      "description": "M.S.; Current: Alibaba",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Yifan Qiao.webp",
+      "name": "Yifan Qiao (乔一凡)",
+      "email": "",
+      "period": "Fall 2019 - Summer 2022",
+      "description": "M.S.; Current: Tencent",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Jiahui Ni.webp",
+      "name": "Jiahui Ni (倪家辉)",
+      "email": "",
+      "period": "Fall 2019 - Summer 2022",
+      "description": "M.S.; Current: HuaWei",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Hang Mou.webp",
+      "name": "Hang Mou (牟航)",
+      "email": "",
+      "period": "Fall 2019 - Summer 2022",
+      "description": "M.S.; Current: ICBC (Chengdu)",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Song Liu.webp",
+      "name": "Song Liu (刘松)",
+      "email": "",
+      "period": "Fall 2018 - Summer 2021",
+      "description": "M.S.; Current: OPPO",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Zhenyun Yuan.webp",
+      "name": "Zhenyun Yuan (袁针云)",
+      "email": "",
+      "period": "Fall 2018 - Summer 2021",
+      "description": "M.S.; Current: CISDI",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Jiaqi Qin.webp",
+      "name": "Jiaqi Qin (秦佳奇)",
+      "email": "",
+      "period": "Fall 2018 - Summer 2021",
+      "description": "M.S.; Current: Tencent",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Peng Bao.webp",
+      "name": "Peng Bao (包鹏)",
+      "email": "",
+      "period": "Fall 2017 - Summer 2020",
+      "description": "M.S.; Current: PhD, Peking University",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Zhimin Shao.webp",
+      "name": "Zhimin Shao (邵志敏)",
+      "email": "",
+      "period": "Fall 2017 - Summer 2020",
+      "description": "M.S.; Current: PSBC",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Xiaojie Zhou.webp",
+      "name": "Xiaojie Zhou (周晓杰)",
+      "email": "",
+      "period": "Fall 2017 - Summer 2020",
+      "description": "M.S.; Current: PLA",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Kang Yang.webp",
+      "name": "Kang Yang (杨康)",
+      "email": "",
+      "period": "Fall 2017 - Summer 2020",
+      "description": "M.S.; Current: Tencent",
+      "link": ""
+    }
+  ]
+}

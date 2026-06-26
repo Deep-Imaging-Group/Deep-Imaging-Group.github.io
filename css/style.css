@@ -24,6 +24,7 @@ body {
   position: relative;
   width: 100%;
   overflow: hidden;
+  padding-bottom: 28px;
 }
 
 .slider {
@@ -39,38 +40,97 @@ body {
   flex: 0 0 100%;
 }
 
+.gallery-loading {
+  flex: 0 0 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #637083;
+  background: #f7f8fa;
+  font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+
 button {
   cursor: pointer;
 }
 
-.slider-container > button {
+.gallery-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 24px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(180, 16, 10, 0.18);
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.72);
+  color: rgb(180, 16, 10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.22s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  z-index: 3;
 }
 
-.slider-container > button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.gallery-nav i {
+  font-size: 11px;
+  line-height: 1;
 }
 
-.slider-container:hover > button {
+.gallery-nav:hover {
+  background-color: rgb(180, 16, 10);
+  color: #fff;
+  border-color: rgb(180, 16, 10);
+}
+
+.slider-container:hover .gallery-nav,
+.slider-container:focus-within .gallery-nav {
   opacity: 1;
+  pointer-events: auto;
 }
 
-.prev {
+.gallery-nav:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.gallery-prev {
   left: 10px;
 }
 
-.next {
+.gallery-next {
   right: 10px;
+}
+
+.gallery-indicators {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.gallery-dot {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.22);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.gallery-dot.active {
+  background-color: #000;
+  transform: scale(1.25);
 }
 
 
@@ -245,6 +305,13 @@ button {
   text-justify: auto;
 }
 
+.highlight-title .publication-paper-link,
+.highlight-title .publication-code-link {
+  font-size: 0.82em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .highlight-meta {
   margin-bottom: 0;
   font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
@@ -257,70 +324,86 @@ button {
   text-justify: auto;
 }
 
-.highlight-nav {
+.highlight-controls {
   position: absolute;
   right: 12px;
-  width: 40px;
-  height: 40px;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease;
+  z-index: 3;
+}
+
+.home-hero-highlights:hover .highlight-controls,
+.highlight-slider:focus-within .highlight-controls {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.highlight-nav {
+  width: 22px;
+  height: 22px;
   border: 1px solid rgba(180, 16, 10, 0.18);
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.88);
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.7);
   color: rgb(180, 16, 10);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 18px rgba(22, 28, 36, 0.08);
-  opacity: 0;
-  pointer-events: none;
-  transition: background-color 0.3s ease, color 0.3s ease, opacity 0.25s ease;
-  z-index: 2;
+  box-shadow: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  z-index: 3;
 }
 
-.home-hero-highlights:hover .highlight-nav {
-  opacity: 1;
-  pointer-events: auto;
+.highlight-nav i {
+  font-size: 10px;
+  line-height: 1;
 }
 
 .highlight-nav:hover {
   background-color: rgb(180, 16, 10);
   color: #fff;
+  border-color: rgb(180, 16, 10);
 }
 
 .highlight-nav:disabled {
-  opacity: 0;
+  opacity: 0.35;
   cursor: default;
 }
 
 .highlight-prev {
-  top: 0;
+  position: static;
 }
 
 .highlight-next {
-  bottom: 0;
+  position: static;
 }
 
 .highlight-indicators {
-  position: absolute;
-  right: 20px;
-  top: 50%;
   display: flex;
   flex-direction: column;
-  gap: 7px;
-  transform: translateY(-50%);
-  z-index: 3;
+  align-items: center;
+  gap: 6px;
 }
 
 .highlight-dot {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   padding: 0;
   border: none;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.22);
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .highlight-dot.active {
   background-color: #000;
+  transform: scale(1.25);
 }
 
 .highlight-loading {
@@ -2171,24 +2254,33 @@ a {
     opacity: 0.16;
   }
 
-  .highlight-nav {
-    top: auto;
-    bottom: 0;
+  .highlight-controls {
     opacity: 1;
     pointer-events: auto;
+    right: 12px;
+  }
+
+  .highlight-nav {
+    width: 22px;
+    height: 22px;
   }
 
   .highlight-prev {
-    left: calc(50% - 46px);
+    left: auto;
     right: auto;
   }
 
   .highlight-next {
-    right: calc(50% - 46px);
+    right: auto;
   }
 
   .highlight-indicators {
-    display: none;
+    display: flex;
+  }
+
+  .gallery-nav {
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 

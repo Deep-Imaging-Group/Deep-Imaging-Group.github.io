@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css?v=20260624-highlight">
+    <link rel="stylesheet" href="css/style.css?v=20260626-members-json">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
@@ -107,13 +107,18 @@
                 <div class="home-hero-content">
                     <div class="home-hero-gallery">
                         <div class="slider-container">
-                            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
-                            <div class="slider">
-                                <img src_="./news_image/group1.webp" alt="Image 1">
-                                <img src_="./news_image/group2.webp" alt="Image 2">
-                                <img src_="./news_image/group3.webp" alt="Image 3">
+                            <button type="button" class="gallery-nav gallery-prev" aria-label="Previous gallery image"
+                                onclick="changeImage(-1, true)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <div class="slider" id="gallery-slider">
+                                <div class="gallery-loading">Loading gallery...</div>
                             </div>
-                            <button class="next" onclick="changeImage(1)">&#10095;</button>
+                            <button type="button" class="gallery-nav gallery-next" aria-label="Next gallery image"
+                                onclick="changeImage(1, true)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="gallery-indicators" id="gallery-indicators"></div>
                         </div>
                     </div>
 
@@ -123,20 +128,22 @@
                         <p class="highlight-section-title">Latest
                             Research Highlight</p>
                         <div class="highlight-slider" id="highlight-slider">
-                            <button type="button" class="highlight-nav highlight-prev" aria-label="Previous highlight"
-                                onclick="changeHighlight(-1)">
-                                <i class="fas fa-chevron-up"></i>
-                            </button>
                             <div class="highlight-viewport" id="highlight-viewport">
                                 <div class="highlight-track" id="highlight-track">
                                     <div class="highlight-loading">Loading highlights...</div>
                                 </div>
                             </div>
-                            <button type="button" class="highlight-nav highlight-next" aria-label="Next highlight"
-                                onclick="changeHighlight(1)">
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div class="highlight-indicators" id="highlight-indicators"></div>
+                            <div class="highlight-controls" aria-label="Highlight controls">
+                                <button type="button" class="highlight-nav highlight-prev"
+                                    aria-label="Previous highlight" onclick="changeHighlight(-1, true)">
+                                    <i class="fas fa-chevron-up"></i>
+                                </button>
+                                <div class="highlight-indicators" id="highlight-indicators"></div>
+                                <button type="button" class="highlight-nav highlight-next" aria-label="Next highlight"
+                                    onclick="changeHighlight(1, true)">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
                         </div>
 
 
@@ -209,6 +216,7 @@
 <script src="./jquery-1.11.1.min.js"></script>
 <script>
     const newsManifestPath = './news/index.json?v=20260626-news';
+    const galleryPath = './gallery/gallery.json?v=20260626-gallery';
     const monthLabels = {
         '01': 'Jan.',
         '02': 'Feb.',
@@ -325,44 +333,232 @@
     }
 
     let currentIndex = 0;
+    let galleryAutoTimer = null;
+    let galleryAutoPaused = false;
+    const galleryAutoInterval = 5000;
     let highlightIndex = 0;
     let highlightItems = [];
+    let highlightAutoTimer = null;
+    let highlightAutoPaused = false;
+    const highlightAutoInterval = 6000;
+    const fallbackGalleryItems = [
+        {
+            image: './gallery/gallery_images/group1.webp',
+            alt: 'Deep Imaging Group photo 1'
+        },
+        {
+            image: './gallery/gallery_images/group2.webp',
+            alt: 'Deep Imaging Group photo 2'
+        },
+        {
+            image: './gallery/gallery_images/group3.webp',
+            alt: 'Deep Imaging Group photo 3'
+        }
+    ];
     const fallbackHighlightItems = [
         {
             title: 'Patient-Level Anatomy Meets Scanning-Level Physics: Personalized Federated Low-Dose CT Denoising Empowered by Large Language Model',
-            authors: 'Ziyuan Yang et al.',
+            author: 'Ziyuan Yang et al.',
             venue: 'CVPR',
             year: '2025',
-            image: './news_image/LLMCT.webp',
-            link: 'https://arxiv.org/abs/2503.00908'
+            image: './highlight/highlight_images/LLMCT.webp',
+            paper: 'https://arxiv.org/abs/2503.00908',
+            code: ''
         },
         {
             title: 'FedRIR: Rethinking Information Representation in Federated Learning',
-            authors: 'Yongqiang Huang et al.',
+            author: 'Yongqiang Huang et al.',
             venue: 'WWW',
             year: '2025',
-            image: './news_image/FedRIR.webp',
-            link: 'https://arxiv.org/abs/2502.00859'
+            image: './highlight/highlight_images/FedRIR.webp',
+            paper: 'https://arxiv.org/abs/2502.00859',
+            code: ''
         },
         {
             title: 'Poisoned Distillation: Injecting Backdoors into Distilled Datasets Without Raw Data Access',
-            authors: 'Ziyuan Yang et al.',
+            author: 'Ziyuan Yang et al.',
             venue: 'AAAI',
             year: '2026',
-            image: './news_image/2026_AAAI.png',
-            link: 'https://ojs.aaai.org/index.php/AAAI/article/view/37119'
+            image: './highlight/highlight_images/2026_AAAI.png',
+            paper: 'https://ojs.aaai.org/index.php/AAAI/article/view/37119',
+            code: ''
         }
     ];
 
-    function changeImage(direction) {
+    function resetGalleryAutoScroll() {
+        stopGalleryAutoScroll();
+        startGalleryAutoScroll();
+    }
+
+    function stopGalleryAutoScroll() {
+        if (galleryAutoTimer) {
+            clearInterval(galleryAutoTimer);
+            galleryAutoTimer = null;
+        }
+    }
+
+    function startGalleryAutoScroll() {
+        stopGalleryAutoScroll();
+        const totalImages = document.querySelectorAll('.slider img').length;
+        if (galleryAutoPaused || document.hidden || totalImages <= 1) {
+            return;
+        }
+
+        galleryAutoTimer = setInterval(function () {
+            changeImage(1, false);
+        }, galleryAutoInterval);
+    }
+
+    function setGalleryAutoPaused(paused) {
+        galleryAutoPaused = paused;
+        if (paused) {
+            stopGalleryAutoScroll();
+        } else {
+            startGalleryAutoScroll();
+        }
+    }
+
+    function changeImage(direction, userAction) {
         const images = document.querySelectorAll('.slider img');
         const totalImages = images.length;
+        if (!totalImages) {
+            return;
+        }
 
         // Calculate new index
         currentIndex = (currentIndex + direction + totalImages) % totalImages;
 
         // Move the slider
         document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateGalleryControls();
+        if (userAction) {
+            resetGalleryAutoScroll();
+        }
+    }
+
+    function updateGalleryControls() {
+        const dots = document.querySelectorAll('.gallery-dot');
+        const navButtons = document.querySelectorAll('.gallery-nav');
+        const totalImages = document.querySelectorAll('.slider img').length;
+
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+
+        navButtons.forEach(button => {
+            button.disabled = totalImages <= 1;
+        });
+    }
+
+    function goToGalleryImage(index, userAction) {
+        const totalImages = document.querySelectorAll('.slider img').length;
+        if (!totalImages) {
+            return;
+        }
+
+        currentIndex = index;
+        document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateGalleryControls();
+        if (userAction) {
+            resetGalleryAutoScroll();
+        }
+    }
+
+    function renderGalleryIndicators(count) {
+        const indicators = document.getElementById('gallery-indicators');
+        if (!indicators) {
+            return;
+        }
+
+        indicators.innerHTML = '';
+        for (let index = 0; index < count; index += 1) {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = `gallery-dot${index === currentIndex ? ' active' : ''}`;
+            dot.setAttribute('aria-label', `Go to gallery image ${index + 1}`);
+            dot.onclick = function () {
+                goToGalleryImage(index, true);
+            };
+            indicators.appendChild(dot);
+        }
+    }
+
+    function bindGalleryAutoScroll() {
+        const container = document.querySelector('.slider-container');
+        if (!container || container.dataset.bound === 'true') {
+            return;
+        }
+
+        container.dataset.bound = 'true';
+        container.addEventListener('mouseenter', function () {
+            setGalleryAutoPaused(true);
+        });
+        container.addEventListener('mouseleave', function () {
+            setGalleryAutoPaused(false);
+        });
+        container.addEventListener('focusin', function () {
+            setGalleryAutoPaused(true);
+        });
+        container.addEventListener('focusout', function () {
+            setGalleryAutoPaused(false);
+        });
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) {
+                stopGalleryAutoScroll();
+            } else {
+                startGalleryAutoScroll();
+            }
+        });
+    }
+
+    function renderGallery(items) {
+        const slider = document.getElementById('gallery-slider');
+        if (!slider) {
+            return;
+        }
+
+        currentIndex = 0;
+        slider.innerHTML = '';
+        slider.style.transform = 'translateX(0)';
+        items.forEach((item, index) => {
+            const image = document.createElement('img');
+            image.src = item.image || '';
+            image.alt = item.alt || `Gallery image ${index + 1}`;
+            image.loading = index === 0 ? 'eager' : 'lazy';
+            slider.appendChild(image);
+        });
+        renderGalleryIndicators(items.length);
+        updateGalleryControls();
+        bindGalleryAutoScroll();
+        startGalleryAutoScroll();
+    }
+
+    async function loadGallery() {
+        try {
+            const items = await loadJson(galleryPath);
+            if (!Array.isArray(items) || !items.length) {
+                throw new Error('No gallery items found in gallery/gallery.json');
+            }
+
+            renderGallery(items);
+        } catch (error) {
+            console.error(error);
+            renderGallery(fallbackGalleryItems);
+        }
+    }
+
+    function createHighlightLink(label, href, className) {
+        if (!href) {
+            return null;
+        }
+
+        const link = document.createElement('a');
+        link.className = className;
+        link.href = href;
+        link.textContent = `[${label}]`;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        return link;
     }
 
     function buildHighlightSlide(item) {
@@ -376,7 +572,7 @@
         imageContainer.className = 'image-container';
 
         const link = document.createElement('a');
-        link.href = item.link || '#';
+        link.href = item.paper || '#';
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
 
@@ -395,11 +591,22 @@
 
         const title = document.createElement('p');
         title.className = 'highlight-title';
-        title.textContent = item.title || '';
+        title.appendChild(document.createTextNode(item.title || ''));
+
+        const paper = createHighlightLink('paper', item.paper, 'publication-paper-link');
+        const code = createHighlightLink('code', item.code, 'publication-code-link');
+        if (paper) {
+            title.appendChild(document.createTextNode(' '));
+            title.appendChild(paper);
+        }
+        if (code) {
+            title.appendChild(document.createTextNode(' '));
+            title.appendChild(code);
+        }
 
         const meta = document.createElement('p');
         meta.className = 'highlight-meta';
-        meta.textContent = [item.authors, item.venue, item.year].filter(Boolean).join(', ');
+        meta.textContent = [item.author, item.venue, item.year].filter(Boolean).join(', ');
 
         right.appendChild(title);
         right.appendChild(meta);
@@ -420,7 +627,7 @@
             dot.className = `highlight-dot${index === highlightIndex ? ' active' : ''}`;
             dot.setAttribute('aria-label', `Go to highlight ${index + 1}`);
             dot.onclick = function () {
-                goToHighlight(index);
+                goToHighlight(index, true);
             };
             indicators.appendChild(dot);
         });
@@ -445,22 +652,60 @@
         });
     }
 
-    function changeHighlight(direction) {
+    function resetHighlightAutoScroll() {
+        stopHighlightAutoScroll();
+        startHighlightAutoScroll();
+    }
+
+    function stopHighlightAutoScroll() {
+        if (highlightAutoTimer) {
+            clearInterval(highlightAutoTimer);
+            highlightAutoTimer = null;
+        }
+    }
+
+    function startHighlightAutoScroll() {
+        stopHighlightAutoScroll();
+        if (highlightAutoPaused || document.hidden || highlightItems.length <= 1) {
+            return;
+        }
+
+        highlightAutoTimer = setInterval(function () {
+            changeHighlight(1, false);
+        }, highlightAutoInterval);
+    }
+
+    function setHighlightAutoPaused(paused) {
+        highlightAutoPaused = paused;
+        if (paused) {
+            stopHighlightAutoScroll();
+        } else {
+            startHighlightAutoScroll();
+        }
+    }
+
+    function changeHighlight(direction, userAction) {
         if (!highlightItems.length) {
             return;
         }
 
         highlightIndex = (highlightIndex + direction + highlightItems.length) % highlightItems.length;
         updateHighlightSlider();
+        if (userAction) {
+            resetHighlightAutoScroll();
+        }
     }
 
-    function goToHighlight(index) {
+    function goToHighlight(index, userAction) {
         if (!highlightItems.length) {
             return;
         }
 
         highlightIndex = index;
         updateHighlightSlider();
+        if (userAction) {
+            resetHighlightAutoScroll();
+        }
     }
 
     function bindHighlightGestures() {
@@ -490,7 +735,7 @@
                 return;
             }
 
-            changeHighlight(touchDeltaY < 0 ? 1 : -1);
+            changeHighlight(touchDeltaY < 0 ? 1 : -1, true);
         });
 
         slider.addEventListener('wheel', function (event) {
@@ -500,26 +745,50 @@
 
             event.preventDefault();
             wheelLocked = true;
-            changeHighlight(event.deltaY > 0 ? 1 : -1);
+            changeHighlight(event.deltaY > 0 ? 1 : -1, true);
 
             setTimeout(function () {
                 wheelLocked = false;
             }, 400);
         }, { passive: false });
+
+        slider.addEventListener('mouseenter', function () {
+            setHighlightAutoPaused(true);
+        });
+
+        slider.addEventListener('mouseleave', function () {
+            setHighlightAutoPaused(false);
+        });
+
+        slider.addEventListener('focusin', function () {
+            setHighlightAutoPaused(true);
+        });
+
+        slider.addEventListener('focusout', function () {
+            setHighlightAutoPaused(false);
+        });
+
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) {
+                stopHighlightAutoScroll();
+            } else {
+                startHighlightAutoScroll();
+            }
+        });
     }
 
     async function loadHighlights() {
         const track = document.getElementById('highlight-track');
 
         try {
-            const response = await fetch('./highlight.json?v=20260624-highlight', { cache: 'no-store' });
+            const response = await fetch('./highlight/highlights.json?v=20260626-highlight', { cache: 'no-store' });
             if (!response.ok) {
-                throw new Error(`Failed to load highlight.json: ${response.status}`);
+                throw new Error(`Failed to load highlight/highlights.json: ${response.status}`);
             }
 
             const data = await response.json();
             if (!Array.isArray(data) || !data.length) {
-                throw new Error('No highlights found in highlight.json');
+                throw new Error('No highlights found in highlight/highlights.json');
             }
 
             highlightItems = data;
@@ -532,6 +801,7 @@
             renderHighlightIndicators();
             updateHighlightSlider();
             bindHighlightGestures();
+            startHighlightAutoScroll();
         } catch (error) {
             console.error(error);
             highlightItems = fallbackHighlightItems;
@@ -543,6 +813,7 @@
             renderHighlightIndicators();
             updateHighlightSlider();
             bindHighlightGestures();
+            startHighlightAutoScroll();
         }
     }
 
@@ -557,16 +828,8 @@
         });
 
         loadHighlights();
+        loadGallery();
         loadNews();
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll("img[src_]").forEach(function (img) {
-            const url = img.getAttribute("src_");
-            if (url) {
-                img.setAttribute("src", url);
-            }
-        });
     });
 
 </script>

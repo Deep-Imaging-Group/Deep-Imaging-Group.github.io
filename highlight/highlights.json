@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Poisoned Distillation: Injecting Backdoors into Distilled Datasets Without Raw Data Access",
+    "author": "Ziyuan Yang et al.",
+    "year": "2026",
+    "venue": "AAAI",
+    "image": "./highlight/highlight_images/2026_AAAI.png",
+    "paper": "https://ojs.aaai.org/index.php/AAAI/article/view/37119",
+    "code": "https://github.com/Zi-YuanYang/Poisoned_DD"
+  },
+  {
+    "title": "Zero-Sacrifice Persistent-Robustness Adversarial Defense for Pre-Trained Encoders",
+    "author": "Zhuxin Lei et al.",
+    "year": "2026",
+    "venue": "ICLR",
+    "image": "./highlight/highlight_images/2026_ICLR.png",
+    "paper": "https://arxiv.org/abs/2602.11204",
+    "code": "https://github.com/Lawliet0o/ZePAD"
+  },
+  {
+    "title": "Beyond Class Boundaries: Federated Visual Primitive Sharing with Text-Guided Adaptation",
+    "author": "Yongqiang Huang et al.",
+    "year": "2026",
+    "venue": "WWW",
+    "image": "./highlight/highlight_images/2026_WWW.png",
+    "paper": "https://dl.acm.org/doi/10.1145/3774904.3792321",
+    "code": ""
+  },
+  {
+    "title": "FACT: Fuzzy Alignment with Comorbidity Topology for Reliable Multi-Label Medical Image Diagnosis",
+    "author": "Yingyu Chen et al.",
+    "year": "2026",
+    "venue": "ICML",
+    "image": "./highlight/highlight_images/2026_ICML_FACT.webp",
+    "paper": "https://icml.cc/virtual/2026/poster/63862",
+    "code": "https://github.com/yyuChen9/FACT"
+  },
+  {
+    "title": "LLM-Orchestrated Diagnose-Plan-Treat for Mixed-Degradation CT Reconstruction",
+    "author": "Yongqiang Huang et al.",
+    "year": "2026",
+    "venue": "IJCAI",
+    "image": "./highlight/highlight_images/2026_IJCAI_Yongqiang.png",
+    "paper": "https://2026.ijcai.org/",
+    "code": "https://github.com/yqhuang2912/AgenticCT"
+  },
+  {
+    "title": "LURE: Latent Space Unblocking for Multi-Concept Reawakening in Diffusion Models",
+    "author": "Mengyu Sun et al.",
+    "year": "2026",
+    "venue": "IJCAI",
+    "image": "./highlight/highlight_images/2026_IJCAI_Mengyu.png",
+    "paper": "https://arxiv.org/abs/2601.14330",
+    "code": "https://github.com/Katherine1312/LURE"
+  },
+  {
+    "title": "Patient-Level Anatomy Meets Scanning-Level Physics: Personalized Federated Low-Dose CT Denoising Empowered by Large Language Model",
+    "author": "Ziyuan Yang et al.",
+    "year": "2025",
+    "venue": "CVPR",
+    "image": "./highlight/highlight_images/LLMCT.webp",
+    "paper": "https://arxiv.org/abs/2503.00908",
+    "code": "https://github.com/Zi-YuanYang/SCAN-PhysFed"
+  },
+  {
+    "title": "FedRIR: Rethinking Information Representation in Federated Learning",
+    "author": "Yongqiang Huang et al.",
+    "year": "2025",
+    "venue": "WWW",
+    "image": "./highlight/highlight_images/FedRIR.webp",
+    "paper": "https://arxiv.org/abs/2502.00859",
+    "code": "https://github.com/yqhuang2912/FedRIR"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "image": "./gallery/gallery_images/group1.webp",
+    "alt": "Deep Imaging Group photo 1"
+  },
+  {
+    "image": "./gallery/gallery_images/group2.webp",
+    "alt": "Deep Imaging Group photo 2"
+  },
+  {
+    "image": "./gallery/gallery_images/group3.webp",
+    "alt": "Deep Imaging Group photo 3"
+  }
+]
