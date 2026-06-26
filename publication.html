@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" 
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css?v=20260626-members-json">
+    <link rel="stylesheet" href="css/style.css?v=20260626-publication-lazy">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -120,22 +120,27 @@
 
 </div>
 <script>
-    function togglePanel(header) {
+    const publicationManifestPath = './publications/index.json';
+    const publicationVersion = '20260626-publication-lazy';
+    const publicationYearCache = {};
+    function setPanelOpen(header, isOpen) {
       const content = header.nextElementSibling;
       const arrowIcon = header.querySelector('.arrow');
-      content.classList.toggle('active');
-      if (content.classList.contains('active')) {
-        arrowIcon.classList.remove('fa-arrow-right');
-        arrowIcon.classList.add('fa-arrow-down');
-      } else {
-        arrowIcon.classList.remove('fa-arrow-down');
-        arrowIcon.classList.add('fa-arrow-right');
-      }
+
+      content.classList.toggle('active', isOpen);
+      arrowIcon.classList.toggle('fa-arrow-down', isOpen);
+      arrowIcon.classList.toggle('fa-arrow-right', !isOpen);
     }
 
-    const publicationManifestPath = './publications/index.json';
-    const publicationVersion = '20260626-publications';
-    const publicationYearCache = {};
+    async function togglePublicationPanel(header) {
+      const content = header.nextElementSibling;
+      const isOpening = !content.classList.contains('active');
+      setPanelOpen(header, isOpening);
+
+      if (isOpening) {
+        await ensurePublicationCategoryLoaded(header.closest('.panel'));
+      }
+    }
 
     function createPublicationLink(label, href, className) {
       if (!href) {
@@ -186,46 +191,102 @@
       return item;
     }
 
-    function createPublicationPanel(year, active) {
+    function createPublicationPanel(yearData, category) {
       const panel = document.createElement('div');
       panel.className = 'panel';
       panel.style.borderBottom = '1px solid rgba(0, 0, 0, .15)';
+      panel.dataset.year = yearData.year;
+      panel.dataset.category = category;
+      panel.dataset.loaded = 'false';
 
       const header = document.createElement('div');
       header.className = 'panel-header';
       header.onclick = function () {
-        togglePanel(header);
+        togglePublicationPanel(header);
       };
 
       const heading = document.createElement('h4');
       const icon = document.createElement('i');
-      icon.className = `fas ${active ? 'fa-arrow-down' : 'fa-arrow-right'} arrow`;
+      icon.className = `fas ${yearData.active ? 'fa-arrow-down' : 'fa-arrow-right'} arrow`;
       heading.appendChild(icon);
-      heading.appendChild(document.createTextNode(` ${year}`));
+      heading.appendChild(document.createTextNode(` ${yearData.year}`));
       header.appendChild(heading);
 
       const content = document.createElement('div');
-      content.className = `panel-content${active ? ' active' : ''}`;
-
-      const list = document.createElement('ul');
-      list.style.marginBottom = '5px';
-      content.appendChild(list);
+      content.className = `panel-content${yearData.active ? ' active' : ''}`;
+      content.dataset.year = yearData.year;
+      content.innerHTML = '<p class="publication-loading">Loading publications...</p>';
 
       panel.appendChild(header);
       panel.appendChild(content);
 
-      return { panel, list };
+      return panel;
     }
 
     async function loadJson(path) {
-      const response = await fetch(`${path}${path.includes('?') ? '&' : '?'}v=${publicationVersion}`, { cache: 'no-store' });
+      const response = await fetch(`${path}${path.includes('?') ? '&' : '?'}v=${publicationVersion}`);
       if (!response.ok) {
         throw new Error(`Failed to load ${path}: ${response.status}`);
       }
       return response.json();
     }
 
-    async function renderPublicationCategory(container, title, years, category) {
+    async function getPublicationYearData(year) {
+      if (!publicationYearCache[year]) {
+        publicationYearCache[year] = loadJson(`./publications/${year}.json`);
+      }
+
+      return await publicationYearCache[year];
+    }
+
+    function renderPublicationEntries(content, yearPublications, category) {
+      const entries = Array.isArray(yearPublications[category]) ? yearPublications[category] : [];
+      if (!entries.length) {
+        content.innerHTML = '<p class="publication-loading">No publications found for this category.</p>';
+        return;
+      }
+
+      const list = document.createElement('ul');
+      list.style.marginBottom = '5px';
+      entries
+        .slice()
+        .sort((a, b) => (a.order || 0) - (b.order || 0))
+        .forEach(publication => {
+          list.appendChild(createPublicationItem(publication));
+        });
+
+      content.appendChild(list);
+    }
+
+    async function ensurePublicationCategoryLoaded(panel) {
+      if (!panel || panel.dataset.loaded === 'true' || panel.dataset.loading === 'true') {
+        return;
+      }
+
+      const year = panel.dataset.year;
+      const category = panel.dataset.category;
+      const content = panel.querySelector('.panel-content');
+      if (!year || !category || !content) {
+        return;
+      }
+
+      panel.dataset.loading = 'true';
+      content.innerHTML = '<p class="publication-loading">Loading publications...</p>';
+
+      try {
+        const yearPublications = await getPublicationYearData(year);
+        content.innerHTML = '';
+        renderPublicationEntries(content, yearPublications, category);
+        panel.dataset.loaded = 'true';
+      } catch (error) {
+        console.error(error);
+        content.innerHTML = '<p class="publication-loading">Failed to load publications. Please refresh the page.</p>';
+      } finally {
+        panel.dataset.loading = 'false';
+      }
+    }
+
+    function renderPublicationCategory(container, title, years, category) {
       const headingWrap = document.createElement('div');
       headingWrap.style.marginBottom = '20px';
       if (category === 'conference') {
@@ -237,23 +298,17 @@
       headingWrap.appendChild(heading);
       container.appendChild(headingWrap);
 
-      for (const yearData of years) {
-        const yearPublications = publicationYearCache[yearData.year] || await loadJson(`./publications/${yearData.year}.json`);
-        publicationYearCache[yearData.year] = yearPublications;
-        const entries = Array.isArray(yearPublications[category]) ? yearPublications[category] : [];
-        if (!entries.length) {
-          continue;
-        }
-
-        const { panel, list } = createPublicationPanel(yearData.year, Boolean(yearData.active));
+      const activePanels = [];
+      years.forEach(yearData => {
+        const panel = createPublicationPanel(yearData, category);
         container.appendChild(panel);
 
-        entries
-          .sort((a, b) => (a.order || 0) - (b.order || 0))
-          .forEach(publication => {
-            list.appendChild(createPublicationItem(publication));
-          });
-      }
+        if (yearData.active) {
+          activePanels.push(panel);
+        }
+      });
+
+      return activePanels;
     }
 
     async function renderPublicationsFromJson() {
@@ -272,8 +327,12 @@
         scholarNote.innerHTML = 'An up-to-date full paper list can be found in <a style="color: rgb(180,16,10);" href="https://scholar.google.com.hk/citations?hl=zh-CN&user=kCtQkrkAAAAJ">Google Scholar</a> page.';
         container.appendChild(scholarNote);
 
-        await renderPublicationCategory(container, 'Journal', years, 'journal');
-        await renderPublicationCategory(container, 'Conference', years, 'conference');
+        const activePanels = [
+          ...renderPublicationCategory(container, 'Journal', years, 'journal'),
+          ...renderPublicationCategory(container, 'Conference', years, 'conference')
+        ];
+
+        await Promise.all(activePanels.map(panel => ensurePublicationCategoryLoaded(panel)));
       } catch (error) {
         console.error(error);
         const loading = container.querySelector('.publication-loading');
