@@ -1,8 +1,12 @@
 {
   "years": [
     {
-      "year": 2025,
+      "year": 2026,
       "active": true
+    },
+    {
+      "year": 2025,
+      "active": false
     },
     {
       "year": 2024,

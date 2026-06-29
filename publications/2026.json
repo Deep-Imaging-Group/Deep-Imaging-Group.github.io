@@ -1,0 +1,116 @@
+{
+  "journal": [
+    {
+      "title": "Interpretable breast cancer identification by multi-view synergistic feature fusion interaction in dense breast tissue",
+      "authors": "Guowei Dai, Chaoyu Wang, Duwei Dai, Qingfeng Tang, Yi Zhang, Hu Chen",
+      "year": 2026,
+      "type": "journal",
+      "venue": "Information Fusion",
+      "paper": "",
+      "code": "",
+      "order": 1
+    },
+    {
+      "title": "Dynamically Perceived Forgery Conditional Diffusion Model for Scientific Image Tampering Localization",
+      "authors": "Jialing Xu, Peisong He, Haoliang Li, Shiqi Wang, Yi Zhang, Xinghao Jiang",
+      "year": 2026,
+      "type": "journal",
+      "venue": "IEEE Transactions on Circuits and Systems for Video Technology",
+      "paper": "",
+      "code": "",
+      "order": 2
+    },
+    {
+      "title": "Double Banking on Knowledge: A Unified All-in-One Framework for Unpaired Multi-Modality Semi-supervised Medical Image Segmentation",
+      "authors": "Yingyu Chen, Ziyuan Yang, Zhongzhou Zhang, Ming Yan, Hui Yu, Yan Liu, Yi Zhang",
+      "year": 2026,
+      "type": "journal",
+      "venue": "IEEE Transactions on Biomedical Engineering",
+      "paper": "",
+      "code": "",
+      "order": 3
+    },
+    {
+      "title": "Enhanced pediatric age estimation from head MRI via self-distillation hybrid-attention network",
+      "authors": "Lei Shi, Xinran Huang, Wenchi Ke, Hrvoje Brki\\'c, Yuchi Zhou, Ting Lu, Xian’e Tang, Lirong Qiu, Shuai Luo, Xingtao Zhang, others",
+      "year": 2026,
+      "type": "journal",
+      "venue": "Biomedical Signal Processing and Control",
+      "paper": "",
+      "code": "",
+      "order": 4
+    },
+    {
+      "title": "FedPalm: A general federated learning framework for closed-and open-set palmprint verification",
+      "authors": "Ziyuan Yang, Yingyu Chen, Chengrui Gao, Andrew Beng Jin Teoh, Bob Zhang, Yi Zhang",
+      "year": 2026,
+      "type": "journal",
+      "venue": "IEEE Transactions on Information Forensics and Security",
+      "paper": "",
+      "code": "",
+      "order": 5
+    },
+    {
+      "title": "Universal pre-training for generalizable incomplete-view CT reconstruction",
+      "authors": "Chenglong Ma, Zilong Li, Junjun He, Junping Zhang, Yi Zhang, Hongming Shan",
+      "year": 2026,
+      "type": "journal",
+      "venue": "Pattern Recognition",
+      "paper": "",
+      "code": "",
+      "order": 6
+    },
+    {
+      "title": "Deepsparse: A foundation model for sparse-view cbct reconstruction",
+      "authors": "Yiqun Lin, Jixiang Chen, Hualiang Wang, Jiewen Yang, Jiarong Guo, Yi Zhang, Xiaomeng Li",
+      "year": 2026,
+      "type": "journal",
+      "venue": "IEEE Transactions on Medical Imaging",
+      "paper": "",
+      "code": "",
+      "order": 7
+    },
+    {
+      "title": "Uncertainty-Aware Cross-Modal Retrieval for Medical Report Generation",
+      "authors": "Nan Zhou, Meng Liu, Linchao He, Mengting Luo, Yidi Chen, Yi Zhang, Ke Zou, Hu Chen",
+      "year": 2026,
+      "type": "journal",
+      "venue": "IEEE Journal of Biomedical and Health Informatics",
+      "paper": "",
+      "code": "",
+      "order": 8
+    },
+    {
+      "title": "Multi-label medical diagnosis using spatial-disease feature condensation and Kolmogorov--Arnold layers",
+      "authors": "Lang Yuan, Yingyu Chen, Ziyuan Yang, Yi Zhang",
+      "year": 2026,
+      "type": "journal",
+      "venue": "Physics in Medicine & Biology",
+      "paper": "",
+      "code": "",
+      "order": 9
+    },
+    {
+      "title": "Flow-based distribution disentanglement and correction for low-dose CT denoising",
+      "authors": "Yaoyao Wu, Zhonghan Qin, Linchao He, Hu Chen, Peixi Liao, Wenchao Du, Yi Zhang",
+      "year": 2026,
+      "type": "journal",
+      "venue": "Biomedical Signal Processing and Control",
+      "paper": "",
+      "code": "",
+      "order": 10
+    }
+  ],
+  "conference": [
+    {
+      "title": "Beyond Class Boundaries: Federated Visual Primitive Sharing with Text-Guided Adaptation",
+      "authors": "Yongqiang Huang, Yingyu Chen, Tao Wang, Zexin Lu, Zerui Shao, Beibei Li, Yi Zhang",
+      "year": 2026,
+      "type": "conference",
+      "venue": "Proceedings of the ACM Web Conference 2026",
+      "paper": "",
+      "code": "",
+      "order": 1
+    }
+  ]
+}
