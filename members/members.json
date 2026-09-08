@@ -83,6 +83,22 @@
       "period": "(Fall 2025 - )",
       "description": "",
       "link": ""
+    },
+    {
+      "image": "./members/member_images/Yue Ma.jpg",
+      "name": "Yue Ma (马跃)",
+      "email": "",
+      "period": "(Fall 2026 - )",
+      "description": "",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Bing Liu.jpg",
+      "name": "Bing Liu (刘兵)",
+      "email": "",
+      "period": "(Fall 2026 - )",
+      "description": "",
+      "link": ""
     }
   ],
   "ms_students": [
@@ -101,33 +117,34 @@
       "period": "(Fall 2025 - )",
       "description": "",
       "link": ""
+    },
+    {
+      "image": "./members/member_images/Zhuoyan Liu.jpg",
+      "name": "Zhuoyan Liu (刘卓彦)",
+      "email": "",
+      "period": "(Fall 2026 - )",
+      "description": "",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Lang Yuan.jpg",
+      "name": "Lang Yuan (袁浪)",
+      "email": "",
+      "period": "(Fall 2026 - )",
+      "description": "",
+      "link": ""
+    },
+    {
+      "image": "./members/member_images/Han Wang.jpg",
+      "name": "Han Wang (汪涵)",
+      "email": "",
+      "period": "(Fall 2026 - )",
+      "description": "",
+      "link": ""
     }
   ],
   "undergraduate_students": [
-    {
-      "image": "",
-      "name": "Jiaxun Guo (郭珈汛)",
-      "email": "",
-      "period": "Aug 2024 - present",
-      "description": "cyber science and engineering",
-      "link": ""
-    },
-    {
-      "image": "",
-      "name": "Zhuxin Lei (雷竺鑫)",
-      "email": "",
-      "period": "Aug 2024 - present",
-      "description": "cyber science and engineering",
-      "link": ""
-    },
-    {
-      "image": "",
-      "name": "Lang Yuan (袁浪)",
-      "email": "",
-      "period": "Aug 2024 - present",
-      "description": "cyber science and engineering",
-      "link": ""
-    }
+
   ],
   "alumni": [
     {
